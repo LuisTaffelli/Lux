@@ -1,34 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useEffect, useReducer } from 'react';
+import { Route, Routes, Navigate } from 'react-router';
+import useShow  from './Utils/Hooks/useShow';
+
+
+import './App.css';
+import Navbar from './GeneralComponents/NavBar/index';
+import Landing from './Pages/Landing/Landing';
+import Footer from './GeneralComponents/Footer';
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  const { state, toggle } = useShow(false);
+  
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <>
+      <Navbar state={state} toggle={toggle}/>
+      <Routes>
+          {/*
+            Las rutas van debajo de este comentario con la siguiente estructura:
+
+            <Route element={Componente o Página a renderizar} path="Ruta en la que debe aparecer el componente"
+
+            exact = Usarlo solo cuando se quiere renderizar en una ruta en especifico />
+
+            En el caso de querer usar rutas privadas envolver el tag de ELEMENT de la siguiente manera:
+
+            {<PrivateRoute> 
+                < n Componentes a renderizar />
+              </PrivateRoute>}
+
+          */}
+          <Route element={<Landing />} exact path="/"/>
+
+
+          <Route element={<Navigate to="/" />} path="*" />
+        </Routes>
+        <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
