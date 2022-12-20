@@ -20,10 +20,9 @@ export const MainContainer = styled.section`
 
 	.RightBottomCorner{
 		position: absolute;
-		width: 10%;
+		width: 13%;
 		top: -3%;
 		right:0;
-		transform: rotate(270deg);
 	}
 
 `
