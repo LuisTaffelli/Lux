@@ -864,7 +864,7 @@ Error generating stack: `+i.message+`
 
 	position: relative;
 	background-color: var(--primary);
-	min-height: 92vh;
+	min-height: 900px;
 
 	display: flex;
 
@@ -964,7 +964,7 @@ Error generating stack: `+i.message+`
 	position: relative;
 
 	background-color: #FFF;
-	min-height: 92vh;
+	min-height: 900px;
 
 	display: flex;
 	flex-direction: column;
@@ -1137,7 +1137,7 @@ Error generating stack: `+i.message+`
 
 	background: url(${Ry}) no-repeat;
 	background-size: 100% 100%;
-	min-height: 92vh;
+	min-height: 940px;
 
 	display: flex;
 	flex-direction: column;
@@ -1305,7 +1305,7 @@ Error generating stack: `+i.message+`
 	position: relative;
 
 	background-color: #FFF;
-	min-height: 70vh;
+	min-height: 740px;
 
 	display: flex;
 	flex-direction: column;
@@ -1461,11 +1461,13 @@ Error generating stack: `+i.message+`
 
 
 	&>img{
-		width: 50%;
+		margin-top: 20px;
+		width: 40%;
+		padding-top: 16px;
 	}
 
 	.CM{
-		width: 68%;	
+		width: 56%;	
 	}
 
 	&>h3{
@@ -1480,7 +1482,7 @@ Error generating stack: `+i.message+`
 	position: relative;
 	background: url(${Jy}) no-repeat;
 	background-color: var(--complement-dregrade4);
-	min-height: 40vh;
+	min-height: 400px;
 
 	background-size: cover;
 
