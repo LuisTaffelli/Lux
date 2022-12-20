@@ -82,7 +82,7 @@ const themes = {
 
 
 export const Main = styled.main`
-  margin: 0 0 10vh 0;
+  margin: 0;
   position: relative;
 
   

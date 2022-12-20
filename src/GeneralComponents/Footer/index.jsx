@@ -8,6 +8,6 @@ import { About, Contact, Copyright, Follow, FooterContainer, Left, Logo, Right, 
 
 export default function Footer() {
   return (
-      <Copyright>Desarrollado por RODMENSOF - Copyright ©2022</Copyright>
+      <Copyright>Desarrollado por Luis Taffelli - Copyright ©2022</Copyright>
   );
 }

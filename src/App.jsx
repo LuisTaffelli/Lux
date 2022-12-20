@@ -7,7 +7,7 @@ import './App.css';
 import Navbar from './GeneralComponents/NavBar/index';
 import Landing from './Pages/Landing/Landing';
 import Footer from './GeneralComponents/Footer';
-
+import TopFooter from './GeneralComponents/FooterTop/SMFooter'
 
 function App() {
 
@@ -33,9 +33,11 @@ function App() {
           */}
           <Route element={<Landing />} exact path="/"/>
 
+          <Route element={<div>Testeo de Rutas</div>} exact path="/Contacto"/>
 
           <Route element={<Navigate to="/" />} path="*" />
         </Routes>
+        <TopFooter />
         <Footer />
     </>
   );

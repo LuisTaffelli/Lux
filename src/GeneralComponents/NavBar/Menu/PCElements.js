@@ -8,7 +8,7 @@ export const MenuLink = styled(Link)`
   height: 100%;
   text-decoration: none;
   color: #FFF;
-  font: normal normal 400 0.7rem Open Sans;
+  font: normal normal 400 0.7rem Montserrat;
   font-weight: 500;
   letter-spacing: 1.9px;
   font-size: 1.2rem;

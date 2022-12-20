@@ -1,38 +1,58 @@
 
 import {
 	MainContainer, 
-	TitleContainer, 
-	InnerTitle
-} from './Styles/TopSection.styled'
+	EmailInput,
+	InputsContainer,
+	TopInput,
+	TextContainer,
+	SendButton
+} from './Styles/BottomSection.styled'
+
+import Select from 'react-select'
 
 import Bubbles from '../Images/ESFERAS.png'
 
-import BackgroundWhite from '../Images/TopBackground.svg'
-import Mirror from '../Images/VIDRIO.png'
-import Logo2 from '../Images/LOGO_2.svg'
-import Decoration from '../Images/Decoracion_5.svg'
+import BackgroundWhite from '../Images/Decoracion_Banner_1.svg'
+
 
 export default function BottomSection (){
+
+	const StylesSelect = {
+		control: (baseStyles, state) => (
+		{
+    		...baseStyles,
+    		borderRadius: 80,
+    		width: '100%',
+    	}),
+    	dropdownIndicator: base => ({
+    		...base,
+    		color: "#E61952" // Custom colour
+  		})
+	}
 
 
 	return (
 		<MainContainer>
-			<TitleContainer>
-				<InnerTitle>
-					<h3>Somos un estudio de -Marketing-</h3>
+			<InputsContainer>
+				<TopInput>
+					<p>¿En que te podemos ayudar?</p>
+					
+					<Select styles={StylesSelect} 
+  					placeholder='Selecciona un plan'/>
+				</TopInput>
+				<EmailInput>
+					<input placeholder='Ingresa un mail' className='InputMail'/>
+					
+					<p>Recibira una respuesta aquí en la brevedad</p>
+				</EmailInput>
+			</InputsContainer>
+			<TextContainer>
+				<textarea className='Text' placeholder='Saludos, me interesa este plan...'/>
 
-					<p>Especializados y exclusivos</p>
-					<p>para el rubro inmobiliario</p>
+				<SendButton>Enviar</SendButton>
 
-				</InnerTitle>
+			</TextContainer>
 
-
-				<img src={Mirror} className='BlurTL'/>
-			</TitleContainer>
-
-			<img src={Decoration} className='Arrows' />
-			<img className='Bubbles' src={Bubbles}/>
-			<img src={Logo2} className='Cross' />
 			<img src={BackgroundWhite} className='RightBottomCorner' />
 		</MainContainer>
 
