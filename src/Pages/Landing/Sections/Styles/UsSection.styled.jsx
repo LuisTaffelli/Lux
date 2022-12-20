@@ -9,7 +9,7 @@ export const MainContainer = styled.section`
 	position: relative;
 
 	background-color: #FFF;
-	min-height: 92vh;
+	min-height: 900px;
 
 	display: flex;
 	flex-direction: column;

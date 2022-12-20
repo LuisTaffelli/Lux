@@ -8,7 +8,7 @@ export const MainContainer = styled.section`
 
 	position: relative;
 	background-color: var(--primary);
-	min-height: 92vh;
+	min-height: 900px;
 
 	display: flex;
 

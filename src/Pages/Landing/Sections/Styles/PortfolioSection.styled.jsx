@@ -10,7 +10,7 @@ export const MainContainer = styled.section`
 
 	background: url(${Background}) no-repeat;
 	background-size: 100% 100%;
-	min-height: 92vh;
+	min-height: 940px;
 
 	display: flex;
 	flex-direction: column;

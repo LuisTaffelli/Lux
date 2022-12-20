@@ -9,7 +9,7 @@ export const MainContainer = styled.section`
 	position: relative;
 
 	background-color: #FFF;
-	min-height: 70vh;
+	min-height: 740px;
 
 	display: flex;
 	flex-direction: column;
@@ -183,11 +183,13 @@ export const InnerCard = styled.div`
 
 
 	&>img{
-		width: 50%;
+		margin-top: 20px;
+		width: 40%;
+		padding-top: 16px;
 	}
 
 	.CM{
-		width: 68%;	
+		width: 56%;	
 	}
 
 	&>h3{

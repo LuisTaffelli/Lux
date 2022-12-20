@@ -9,7 +9,7 @@ export const MainContainer = styled.section`
 	position: relative;
 	background: url(${BackgroundImage}) no-repeat;
 	background-color: var(--complement-dregrade4);
-	min-height: 40vh;
+	min-height: 400px;
 
 	background-size: cover;
 
