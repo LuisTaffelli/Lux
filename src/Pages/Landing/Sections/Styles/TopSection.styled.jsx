@@ -1,29 +1,91 @@
 import styled from 'styled-components';
+import {breakpoints} from '../../../../Utils/breakpoints'
+
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+
+export const MirrorColumn = styled(Col)`
+
+	
+
+	position: absolute;
+	top: ${({status})=> status ? '-36px' : '-28px'};
+	left: -23px;
+
+	width: 36%;
+
+	@media screen and (${breakpoints.pcFullRes}){
+		width: 26%;
+		top: ${({status})=> status ? '-36px' : '-28px'};
+		left: -20px;
+	}
 
 
 
+`
 
-
-export const MainContainer = styled.section`
+export const PlanesBoton = styled(Button)`
 
 	position: relative;
-	background-color: var(--primary);
-	min-height: 900px;
 
-	display: flex;
+	z-index: 3;
 
-	align-items: center;
+	background-color: transparent;
+	border: none;
+
+	margin-left: 4%;
+	margin-top: 8px;
+		
+	&>h2{
+		font-size: calc(1.625rem + 0.9vw);
+	}
+
+	&:hover{
+		background-color: transparent !important;
+		border-color: transparent !important;
+	}
+
+
+`
+
+
+export const MainContainer = styled(Container)`
+
+	position: relative;
+	background-image: linear-gradient(to right, #560b26, #780e33, #9b113e, #c01449, #e61952);
+	min-height: 100vh;
+
+	padding-top: 100px;
+
+	@keyframes ArrAbaPelotas {
+
+		0% {top: 0%}
+
+
+		100% {top:38%}
+
+
+	}
 
 
 	.Bubbles{
 		position: absolute;
-		width: 20%;
-		left: 10%;
+		width: 30%;
+    	left: 88%;
+    	top: 15%;
+		transform: scaleX(-1);
+		animation-name: ArrAbaPelotas;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
 	}
 
 	.RightBottomCorner{
 		position: absolute;
-		width: 17%;
+		width: 20%;
 		bottom: 0;
 		right:0;
 	}
@@ -38,11 +100,11 @@ export const MainContainer = styled.section`
 	.Cross{
 		position absolute;
 
-		width: 8%;
+		width: 6%;
 
-		bottom: 8%;
+		bottom: 45%;
 
-		left: 38%;
+		left: 42%;
 
 		transform: translateX(100%);
 	}
@@ -50,7 +112,7 @@ export const MainContainer = styled.section`
 `
 
 
-export const TitleContainer = styled.div`
+export const RowContainer = styled(Row)`
 
 	position: relative;
 
@@ -58,13 +120,14 @@ export const TitleContainer = styled.div`
 
 	margin:0 auto 80px auto;
 
+
 	border-radius: 24px;
 
 	justify-content: center;
 
-	width: 55%;
+	width: 42%;
 
-	height: 400px;
+	height: 280px;
 
 	display: flex;
 
@@ -72,6 +135,7 @@ export const TitleContainer = styled.div`
 
 	.BlurTL{
 		position: absolute;
+		max-width: none !important;
     	width: 196%;
     	height: 238%;
     	left: 0;
@@ -93,7 +157,7 @@ export const TitleContainer = styled.div`
 `
 
 
-export const InnerTitle = styled.div`
+export const InnerTitle = styled(Col)`
 
 	z-index: 3;
 

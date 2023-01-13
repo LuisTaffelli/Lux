@@ -2,7 +2,7 @@ import { useEffect, useReducer } from 'react';
 import { Route, Routes, Navigate } from 'react-router';
 import useShow  from './Utils/Hooks/useShow';
 
-
+import './App.scss';
 import './App.css';
 import Navbar from './GeneralComponents/NavBar/index';
 import Landing from './Pages/Landing/Landing';

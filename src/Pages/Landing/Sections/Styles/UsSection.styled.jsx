@@ -1,6 +1,23 @@
 import styled from 'styled-components';
 
 
+export const PlanesContainer = styled.div`
+
+	display: flex;
+
+	flex-direction: column;
+
+
+	&>button{
+		color: var(--primary);
+		width: 80%;
+    	margin: 40px 0 40px 6%;
+	}
+
+
+
+`
+
 
 
 
@@ -10,6 +27,8 @@ export const MainContainer = styled.section`
 
 	background-color: #FFF;
 	min-height: 900px;
+
+	padding-bottom: 40px;
 
 	display: flex;
 	flex-direction: column;
@@ -178,7 +197,7 @@ export const InnerCard = styled.div`
 
 	align-items: center;
 
-	box-shadow: 0 0.5rem 2rem #0000008f;
+	box-shadow: 0 0.5rem 2rem var(--primary);
 
 	border-radius: 24px;
 

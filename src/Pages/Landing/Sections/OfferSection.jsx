@@ -19,19 +19,27 @@ const Mockup = [
 	{
 		title: 'Community Manager',
 		img: ComMan,
-		className: 'CM'
+		className: 'CM',
+		lightText: 'Estar activo en redes es importante para generar posibles compradores.',
+		boldText: ['Diseños de estrategias de comunicación, atención a consultas/dudas. Gestionamos y administramos tus redes.'],
 	},
 	{
 		title: 'Marketing Digital',
-		img: MarDigital
+		img: MarDigital,
+		lightText: 'Una estrategia de comunicación es esencial para atraer la atención hacia tu marca',
+		boldText: ['Análisis y acumulación de datos, Identificación de oportunidades y problemas, atracción de público ideal.'],
 	},
 	{
 		title: 'Diseño Gráfico',
-		img: DiGra
+		img: DiGra,
+		lightText: 'Diferenciarse de su competencia hace a su marca memorable, lo que despierta interés.',
+		boldText: ['Creación de logo, Identidad visual, realización de piezas para R.R.S.S'],
 	},
 	{
 		title: 'Coach',
-		img: Coach
+		img: Coach,
+		lightText: 'Para quienes quieran administrar sus propias RRSS ofrecemos unas tutorías prácticas e introductoras.',
+		boldText: ['- Diseño','- Community Manager','- Rubro inmobiliario'],
 	}
 
 ]
@@ -49,6 +57,8 @@ export default function OfferSection (){
 				{Mockup.map((el)=><InnerCard>
 					<img src={el.img} className={el.className}/>
 					<h3>{el.title}</h3>
+					<p>{el.lightText}</p>
+					{el.boldText.map(text=><h5>{text}</h5>)}
 				</InnerCard>)}
 			</CardsContainer>
 

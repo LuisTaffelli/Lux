@@ -29,14 +29,14 @@ function Navbar({ state, toggle }) {
 
   const SessionNav = isSession()
 
-  const [BgColor, setBgColor] = useState('--primary')
+  const [BgColor, setBgColor] = useState('transparent')
 
 
   const HandleColor = (event)=>{
     setBgColor('--primary-dark1')
 
     if(event.path[1].scrollY === 0){
-      setBgColor('--primary')
+      setBgColor('transparent')
     }
   }
 

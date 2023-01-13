@@ -4,7 +4,6 @@
   line-height: 24px;
   font-weight: 400;
 
-
   overflow-x: hidden;
 
   font-synthesis: none;
@@ -20,6 +19,8 @@
   --primary-dark1:#560B26;
   --secondary: #111223;
   --secondary-dark: #232A31;
+
+  --gradient1: linear-gradient(to right, #560b26, #780e33, #9b113e, #c01449, #e61952);
 
   
 
@@ -55,6 +56,7 @@ a {
 body {
   margin: 0;
   display: flex;
+  background-image: linear-gradient(to right, #560b26, #780e33, #9b113e, #c01449, #e61952);
   place-items: center;
   min-width: 320px;
   min-height: 100vh;

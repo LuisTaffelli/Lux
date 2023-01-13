@@ -5,6 +5,7 @@ import {
 	TopDescriptionContainer,
 	BottomTitleContainer,
 	BottomDescriptionContainer,
+	PlanesContainer,
 	CardsContainer,
 	InnerCard
 } from './Styles/UsSection.styled'
@@ -65,11 +66,21 @@ export default function UsSection (){
 				<p>Encontrá el que se adecue más a tus necesidades,</p>
 				<p>nosotros nos encargamos del resto.</p>
 			</BottomDescriptionContainer>
-			<CardsContainer>
-				{Mockup.map((el)=><InnerCard>
-					<h3>{el.title}</h3>
-				</InnerCard>)}
-			</CardsContainer>
+			<PlanesContainer>
+				<CardsContainer>
+					{Mockup.map((el)=><InnerCard>
+						<h3>{el.title}</h3>
+					</InnerCard>)}
+				</CardsContainer>
+
+				<button type='button'>
+					<h2>Ver Más &gt;</h2>
+				</button>
+
+
+			</PlanesContainer>
+
+
 
 			<img src={BackgroundWhite} className='RightTopCorner' />
 			<img src={DotsRight} className='RightDots' />
