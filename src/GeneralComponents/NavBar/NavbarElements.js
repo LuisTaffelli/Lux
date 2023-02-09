@@ -6,6 +6,7 @@ export const Header = styled.header`
   position: sticky;
   top: 0;
   left: 0;
+  min-width: 100vw;
 
   z-index: 500;
   box-shadow: 0 0.5rem 0.75rem #0001;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {breakpoints} from '../../../../Utils/breakpoints'
+import {breakpoints} from '../../../Utils/breakpoints'
 
 
 import Container from 'react-bootstrap/Container';
@@ -52,63 +52,44 @@ export const PlanesBoton = styled(Button)`
 `
 
 
-export const MainContainer = styled(Container)`
+export const MainContainer = styled.section`
 
 	position: relative;
-	background-image: var(--gradient1);
-	min-height: 100vh;
+	background-color: var(--primary);
+	min-height: 400px;
+
+	padding: 0 16%;
 
 	padding-top: 100px;
 
-	@keyframes ArrAbaPelotas {
+	color: var(--complement-dregrade3);
 
-		0% {top: 0%}
-
-
-		100% {top:38%}
-
-
-	}
+	
 
 
 	.Bubbles{
 		position: absolute;
-		width: 30%;
-    	left: 88%;
+		width: 12%;
+    	right: 15%;
     	top: 15%;
-		transform: scaleX(-1);
-		animation-name: ArrAbaPelotas;
-		animation-duration: 5s;
-		animation-iteration-count: infinite;
-		animation-direction: alternate;
 	}
 
-	.RightBottomCorner{
+	.Decoration{
 		position: absolute;
-		width: 20%;
+		width: 40px;
+		right: 5%;
 		bottom: 0;
-		right:0;
+
 	}
 
-	.Arrows{
-		position: absolute;
-		left: -1%;
-		width: 20%;
-		top: 7%;
+	.Title{
+		font-weight: 700;
 	}
 
-	.Cross{
-		position: absolute;
-
-		width: 6%;
-
-		bottom: 45%;
-
-		left: 42%;
-
-		transform: translateX(100%);
+	.Description{
+		margin-top: 20px;
+		font-weight: 400;
 	}
-
 `
 
 

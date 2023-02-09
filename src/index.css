@@ -20,6 +20,8 @@
   --secondary: #111223;
   --secondary-dark: #232A31;
 
+  --transparent: transparent;
+
   --gradient1: linear-gradient(to right, #560b26, #780e33, #9b113e, #c01449, #e61952);
 
   
@@ -34,6 +36,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+#root{
+  min-width: 100vw;
 }
 
 button,
@@ -65,6 +71,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+a:hover{
+  color: #FFF;
+  text-decoration: underline;
 }
 
 button {

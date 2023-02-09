@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BackgroundImage from '../../../../Images/Footer_degradado.svg';
+import BackgroundImage from '../../../Images/Footer_degradado.svg';
 
 
 
@@ -21,7 +21,7 @@ export const MainContainer = styled.section`
 	.RightBottomCorner{
 		position: absolute;
 		width: 13%;
-		top: -3%;
+		top: 0;
 		right:0;
 	}
 

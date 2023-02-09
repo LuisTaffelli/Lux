@@ -36,7 +36,7 @@ function Navbar({ state, toggle }) {
     setBgColor('--primary-dark1')
 
     if(event.path[1].scrollY === 0){
-      setBgColor('transparent')
+      setBgColor('--transparent')
     }
   }
 
@@ -100,7 +100,9 @@ function Navbar({ state, toggle }) {
 
   return (
     <>
-      <Header isLanding={landing} ref={BackgroundRef} color={BgColor} onScroll={HandleColor}>
+      <Header isLanding={landing} 
+      ref={BackgroundRef} color={BgColor} 
+      onScroll={HandleColor}>
         <Nav>
           <LogoContainer>
             <Link className="logo-container" to="/">

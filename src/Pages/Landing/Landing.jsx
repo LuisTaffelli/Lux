@@ -17,7 +17,6 @@ import {
   UsSection, 
   PortfolioSection,
   OfferSection,
-  BottomSection
 } from './Sections'
 
 import { PrimaryButton } from '../../GeneralComponents/Buttons';
@@ -37,7 +36,6 @@ export default function Landing() {
       <UsSection />
       <PortfolioSection />
       <OfferSection />
-      <BottomSection />
     </Main>
   )
 }

@@ -14,6 +14,14 @@ export const MainContainer = styled.section`
 	display: flex;
 	flex-direction: column;
 
+	.LeftCorner{
+		position: absolute;
+		width: 16%;
+		left: 0;
+		top: 0;
+
+	}
+
 
 	.Bubbles{
 		position: absolute;
@@ -56,8 +64,6 @@ export const TopTitleContainer = styled.div`
 
 	margin: 60px 0 0 6%;
 
-	top: -80px;
-
 	width: 80%;
 
 	display: flex;
@@ -66,9 +72,24 @@ export const TopTitleContainer = styled.div`
 
 	color: var(--primary);
 
-	font-size: 32px;
+	font-size: 38px;
 
 	text-align: right;
+
+	&>h2{
+		font-size: calc(1.325rem + 1.9vw);
+	}
+
+	&>h2::after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 20%;
+		align-content: flex-end;
+		background-color: #E61952;
+		height: 2px;
+	}
 
 
 `
@@ -159,6 +180,7 @@ export const CardsContainer = styled.div`
 	justify-content: space-around;
 
 
+	
 
 `
 
@@ -190,6 +212,12 @@ export const InnerCard = styled.div`
 
 	.CM{
 		width: 56%;	
+	}
+
+	&>p, h5{
+		width: 80%;
+		text-align: center;
+		margin: 8px 0;
 	}
 
 	&>h3{

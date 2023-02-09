@@ -10,9 +10,9 @@ import {
 
 import Select from 'react-select'
 
-import Bubbles from '../../../Images/ESFERAS.png'
+import Bubbles from '../../Images/ESFERAS.png'
 
-import BackgroundWhite from '../../../Images/Decoracion_6.svg'
+import BackgroundWhite from '../../Images/Decoracion_6.svg'
 
 
 export default function BottomSection (){

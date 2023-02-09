@@ -9,11 +9,11 @@ import {
 	InnerCard
 } from './Styles/PortfolioSection.styled'
 
-import CrossRight from '../Images/Decoracion_3.svg'
-import DotsBelow from '../Images/Decoracion_2.svg'
-import BackgroundWhite from '../Images/Decoracion_Banner_2.svg'
-// import Bubbles from '../Images/Esferas.svg'
-// import Bubbles from '../Images/Esferas.svg'
+import CrossRight from '../../../Images/Decoracion_3.svg'
+import DotsBelow from '../../../Images/Decoracion_2.svg'
+import BackgroundWhite from '../../../Images/Decoracion_Banner_2.svg'
+// import Bubbles from '../../../Images/Esferas.svg'
+// import Bubbles from '../../../Images/Esferas.svg'
 
 const Mockup = [
 	{

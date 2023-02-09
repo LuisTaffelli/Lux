@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Background from '../../Images/Fondo_Color_1____2.png'
+import Background from '../../../../Images/Fondo_Color_1____2.png'
 
 
 
@@ -8,7 +8,7 @@ export const MainContainer = styled.section`
 
 	position: relative;
 
-	background: url(${Background}) no-repeat;
+	background: var(--gradient1);
 	background-size: 100% 100%;
 	min-height: 940px;
 

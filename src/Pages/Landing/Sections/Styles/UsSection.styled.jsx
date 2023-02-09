@@ -42,7 +42,7 @@ export const MainContainer = styled.section`
 
 	.RightTopCorner{
 		position: absolute;
-		width: 18%;
+		width: 21.22%;
 		top: 0;
 		right:0;
 	}

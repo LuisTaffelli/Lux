@@ -1,5 +1,5 @@
 import {useState} from 'react';
-
+import {Link} from 'react-router-dom'
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,14 +15,14 @@ import {
 
 
 
-import Bubbles from '../Images/ESFERAS.png'
+import Bubbles from '../../../Images/ESFERAS.png'
 
-import BackgroundWhite from '../Images/TopBackground.svg'
-import Mirror from '../Images/VIDRIO.png'
-import BotonVidrio1 from '../Images/Boton_1.png'
-import BotonVidrio2 from '../Images/Boton_2.png'
-import Logo2 from '../Images/LOGO_2.svg'
-import Decoration from '../Images/Decoracion_5.svg'
+import BackgroundWhite from '../../../Images/TopBackground.svg'
+import Mirror from '../../../Images/VIDRIO.png'
+import BotonVidrio1 from '../../../Images/Boton_1.png'
+import BotonVidrio2 from '../../../Images/Boton_2.png'
+import Logo2 from '../../../Images/LOGO_2.svg'
+import Decoration from '../../../Images/Decoracion_5.svg'
 
 
 
@@ -75,11 +75,15 @@ export default function TopSection (){
 
 							}
 							</MirrorColumn>
-							<PlanesBoton type="button" onClick={()=>setMirrorStatus(
-								(old)=>!old
-								)}>
-								<h2 className="text-light">VER PLANES</h2>
-							</PlanesBoton>
+							<Link to='/Planes' className="text-light">
+								<PlanesBoton type="button" onClick={()=>setMirrorStatus(
+									(old)=>!old
+									)}>
+									<h2>
+										VER PLANES
+									</h2>
+								</PlanesBoton>
+							</Link>
 						</Col>
 					</Row>
 				</Col>

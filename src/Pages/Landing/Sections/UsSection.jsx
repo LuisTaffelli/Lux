@@ -10,9 +10,9 @@ import {
 	InnerCard
 } from './Styles/UsSection.styled'
 
-import DotsRight from '../Images/Decoracion_1.svg'
-import DotsBelow from '../Images/Decoracion_2.svg'
-import BackgroundWhite from '../Images/Decoracion_Banner_2.svg'
+import DotsRight from '../../../Images/Decoracion_1.svg'
+import DotsBelow from '../../../Images/Decoracion_2.svg'
+import BackgroundWhite from '../../../Images/Decoracion_Banner_2.svg'
 // import Bubbles from '../Images/Esferas.svg'
 // import Bubbles from '../Images/Esferas.svg'
 

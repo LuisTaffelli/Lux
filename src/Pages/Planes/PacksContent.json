@@ -1,0 +1,42 @@
+[
+	{
+		"Title": "",
+		"Description": "Para partir con ventaja en el mercado, es necesario que tu marca o desarrollo <br/> se distinga del resto, para eso necesitás una identidad visual profesional<br/> y memorable; en <span class='Luxed'> Lux </span>, tenemos el pack perfecto para que arranques<br/> con todo.",
+		"Name": "#Iniciante",
+		"Offers": "Diseño de logo - selección de paleta cromática - fuente tipográfica <br/> identidad visual - posteos en redes - papelería institucional (flyers, cartas, <br/> sobres, tarjetas de presentación, etc.) y cartelería"
+	},
+	{
+		"Title": "DESARROLLADORAS",
+		"Description": "Para comercializar un emprendimiento de forma exitosa y eficaz se necesita<br/>llegar a un público objetivo en redes y plataformas de internet<br/> con un impacto visual y comunicativo atractivo, en este pack te ofrecemos todo eso y<br/>más, ya que te damos servicios plus que podés agregar al pack según<br/>tus necesidades.",
+		"Name": "#Desarrollos",
+		"Offers": "Logo e identidad del proyecto. Estrategia de marketing, diseño cartelería, landing page, creación de perfil en Instagram y tiktok, Chatbot, diseño de carpeta, papelería, folletería y videos. ",
+		"Extras":[
+			"+ diseño de render","+ Publicidad, Filmmaker, fotógrafo para documentar el seguimiento de la obra mensualmente ","+ Oficina conteiner para comercializar tu emprendimiento desde el lugar. ", "+ Community manager (manejo de redes)"
+		],
+		"Information": "Los servicios plus agregados modificarán el precio final del pack."
+	},
+	{
+		"Title": "",
+		"Description": "Si tenés el tiempo en contra, ¡no te preocupes! en <span class='Luxed'> Lux </span> te ofrecemos un pack<br/> que te saca de apuros de forma rápida y eficaz.",
+		"Name": "#Desarrollos en apuros",
+		"Offers": "Community manager, pauta publicitaria (google ads y meta), story y posteos para Instagram",
+		"Information": "Si el proyecto no tiene una identidad visual previamente armada, el cliente puede solicitar el diseño de piezas para redes y publicidad que influirá en el costo final del pack."
+	},
+	{
+		"Title": "INMOBILIARIAS",
+		"Description": "En <span class='Luxed'> Lux</span>, somos expertos en el rubro inmobiliario, por lo tanto, en este<br/> pack te ofrecemos exactamente lo que necesitas para atraer a tu público<br/> y sobresalir de otros competidores.",
+		"Name": "#Inmobiliarias",
+		"Offers": "Logo e identidad visual de la inmobiliaria, estrategia de marketing, diseño cartelería, Landing page, creación de perfil en Instagram y tiktok, Chatbot, diseño de carpeta, papelería, folletería y videos.",
+		"Extras":[
+			"+ diseño de render","+ Publicidad, Filmmaker, fotógrafo para documentar el seguimiento de la obra mensualmente ","+ Oficina conteiner para comercializar tu emprendimiento desde el lugar. ", "+ Community manager (manejo de redes)"
+		],
+		"Information": "Los servicios plus agregados modificarán el precio final del pack."
+	},
+	{
+		"Title": "",
+		"Description": "Si tenés el tiempo en contra, ¡no te preocupes! en <span class='Luxed'>Lux </span>te ofrecemos un pack<br/>que te saca de apuros de forma rápida y eficaz",
+		"Name": "#Inmobiliarias en apuros",
+		"Offers": "Community manager - pauta publicitaria (google ads y meta) - story y posteos para Instagram",
+		"Information": "Si el proyecto no tiene una identidad visual previamente armada, el cliente puede solicitar el diseño de piezas para redes y publicidad que influirá en el costo final del pack."
+	}
+]

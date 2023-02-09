@@ -9,11 +9,12 @@ import {
 	InnerCard
 } from './Styles/OfferSection.styled'
 
-import ComMan from '../Images/Icono_CM.svg'
-import MarDigital from '../Images/Icono_MKT.svg'
-import DiGra from '../Images/Icono_DSGN.svg'
-import Coach from '../Images/Icono_Coach.svg'
-import Bars from '../Images/Decoracion_4.svg'
+import ComMan from '../../../Images/Icono_CM.svg'
+import MarDigital from '../../../Images/Icono_MKT.svg'
+import DiGra from '../../../Images/Icono_DSGN.svg'
+import Coach from '../../../Images/Icono_Coach.svg'
+import Bars from '../../../Images/Decoracion_4.svg'
+import LeftCorner from '../../../Images/Decoracion_7.svg'
 
 const Mockup = [
 	{
@@ -50,6 +51,7 @@ export default function OfferSection (){
 
 	return (
 		<MainContainer>
+			<img src={LeftCorner} className='LeftCorner'/>
 			<TopTitleContainer>
 				<h2>¿Qué Ofrecemos?</h2>
 			</TopTitleContainer>
