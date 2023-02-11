@@ -1,3 +1,5 @@
+import { useContext, useEffect, useState } from "react"
+import { WebSocketContext } from '../../../FooterProvider/Index';
 
 import {
 	MainContainer,
@@ -9,7 +11,7 @@ import {
 
 import RightCorner from '../../../Images/Decoracion_Banner_2.svg'
 import WhatsappIcon from '../../../Images/whatsapp.svg'
-
+import WhatsappLink from '../../../Utils/WhatsappLink'
 
 
 
@@ -17,6 +19,24 @@ import WhatsappIcon from '../../../Images/whatsapp.svg'
 
 export default function CardsPlanes(){
 
+	const ws = useContext(WebSocketContext)
+
+	const HandleSubmit = ()=>{
+
+		const TemplateParams = {
+			PackName: 'Reinventate',
+		}
+
+		ws.PlanHandler(TemplateParams)
+
+
+	}
+
+	const WhatsappHandler = ()=>{
+
+		
+		return WhatsappLink(`Hola! Me gustaría solicitar el plan General - Reinventate`)
+	}
 
 
 	return(
@@ -41,11 +61,14 @@ export default function CardsPlanes(){
 						cartas, sobres, tarjetas de presentación, etc.) y cartelería.
 					</div>
 					<div className="MediaButtons fs-6">
-						<button type="button" className="TextButton">
+						<button onClick={HandleSubmit}
+						type="button" className="TextButton">
 							Seleccionar
 						</button>
 						<button type="button" className="WhatsappButton">
-							<img src={WhatsappIcon} className="WhatsappIcon"/>
+							<a href={WhatsappHandler()} target="_blank">
+								<img src={WhatsappIcon} className="WhatsappIcon"/>
+							</a>
 						</button>
 					</div>
 				</LeftContainer>

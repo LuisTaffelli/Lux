@@ -1,4 +1,4 @@
-
+import {Link} from 'react-router-dom'
 import {
 	MainContainer, 
 	TopTitleContainer, 
@@ -74,7 +74,7 @@ export default function UsSection (){
 				</CardsContainer>
 
 				<button type='button'>
-					<h2>Ver Más &gt;</h2>
+					<Link><h2>Ver Más &gt;</h2></Link>
 				</button>
 
 

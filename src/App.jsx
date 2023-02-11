@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import { Route, Routes, Navigate } from 'react-router';
 import useShow  from './Utils/Hooks/useShow';
 
@@ -13,10 +13,11 @@ import TopFooter from './GeneralComponents/FooterTop/SMFooter'
 function App() {
 
   const { state, toggle } = useShow(false);
+  const [Section, setSection] = useState('')
   
   return (
     <>
-      <Navbar state={state} toggle={toggle}/>
+      <Navbar state={state} toggle={toggle} SectionSetter={setSection}/>
       <Routes>
           {/*
             Las rutas van debajo de este comentario con la siguiente estructura:
@@ -32,7 +33,7 @@ function App() {
               </PrivateRoute>}
 
           */}
-          <Route element={<Landing />} exact path="/"/>
+          <Route element={<Landing ScrollTo={Section}/>} exact path="/"/>
 
           <Route element={<Planes />} exact path="/Planes"/>
 

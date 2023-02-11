@@ -1,4 +1,5 @@
-import {useRef, useEffect} from 'react';
+import { useContext, useEffect, useState, useRef } from "react"
+import { WebSocketContext } from '../../../FooterProvider/Index';
 
 import {
 	MainContainer,
@@ -9,6 +10,7 @@ import {
 } from '../Styles/General.styled'
 
 import WhatsappIcon from '../../../Images/whatsapp.svg'
+import WhatsappLink from '../../../Utils/WhatsappLink'
 
 
 
@@ -21,8 +23,28 @@ export default function CardsPlanes({
 	Title, PackName, PackDescription, PackContent, Index, Information, Extras
 }){
 
+	const ws = useContext(WebSocketContext)
 	const DescriptionContentRef = useRef()
 	const PackContentRef = useRef()
+	const InfoContent = useRef()
+
+
+	const WhatsappHandler = ()=>{
+
+		
+		return WhatsappLink(`Hola! Me gustaría solicitar el plan de ${Title}-${PackName.split('#')[1]}`)
+	}
+
+	const HandleSubmit = ()=>{
+
+		const TemplateParams = {
+			PackName: PackName.split('#')[1]
+		}
+
+		ws.PlanHandler(TemplateParams)
+
+
+	}
 
 	useEffect(()=>{
 		DescriptionContentRef.current.innerHTML = PackDescription
@@ -33,6 +55,14 @@ export default function CardsPlanes({
 		PackContentRef.current.innerHTML = PackContent
 		return undefined;
 	},[PackContentRef])
+
+	useEffect(()=>{
+		if(!InfoContent.current){
+			return undefined
+		}
+		InfoContent.current.innerHTML = Information
+		return undefined;
+	},[InfoContent])
 
 	if(Index%2 !== 0){
 		return(
@@ -54,16 +84,17 @@ export default function CardsPlanes({
 							</div>) 
 						: null}
 					</div>
-					{Information ? <div className="GreyInfo fs-6">
-						{Information}
-					</div>
+					{Information ? <div ref={InfoContent} className="GreyInfo fs-6"/>
 					: null}
 					<div className="MediaButtons fs-6">
-						<button type="button" className="TextButton">
+						<button onClick={HandleSubmit}
+						type="button" className="TextButton">
 							Seleccionar
 						</button>
 						<button type="button" className="WhatsappButton">
-							<img src={WhatsappIcon} className="WhatsappIcon"/>
+							<a href={WhatsappHandler()} target="_blank">
+								<img src={WhatsappIcon} className="WhatsappIcon"/>
+							</a>
 						</button>
 					</div>
 				</LeftContainer>
@@ -102,16 +133,17 @@ export default function CardsPlanes({
 							</div>) 
 						: null}
 					</div>
-					{Information ? <div className="GreyInfo fs-6">
-						{Information}
-					</div>
+					{Information ? <div ref={InfoContent} className="GreyInfo fs-6"/>
 					: null}
 					<div className="MediaButtons fs-6">
-						<button type="button" className="TextButton">
+						<button onClick={HandleSubmit}
+						type="button" className="TextButton">
 							Seleccionar
 						</button>
 						<button type="button" className="WhatsappButton">
-							<img src={WhatsappIcon} className="WhatsappIcon"/>
+							<a href={WhatsappHandler()} target="_blank">
+								<img src={WhatsappIcon} className="WhatsappIcon"/>
+							</a>
 						</button>
 					</div>
 				</RightContainer>

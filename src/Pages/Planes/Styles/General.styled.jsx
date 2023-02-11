@@ -135,6 +135,64 @@ export const LeftContainer = styled.div`
 	
 	margin: 0 12px;
 
+	.PackInfoPersonalizado{
+		display: flex;
+	}
+
+	.PersonalizadoLeft{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.PersonalizadoRight{
+		display: flex;
+		flex-direction: column;
+		margin-left: 12px;
+	}
+
+	.CustomCheckbox{
+  		position: relative;
+  		display: inline-block;
+  		padding: 0 6px;
+  		margin: 10px 0;
+
+  		&>input{
+  			border: transparent;
+  			outline: transparent;
+  			margin-right: 8px;
+  			appearance: none;
+  		}
+
+		&>input:after {
+        	width: 15px;
+        	height: 15px;
+        	border-radius: 15px;
+        	top: 0px;
+        	left: 0px;
+        	position: relative;
+        	background-color: #FFF;
+        	content: '';
+        	display: inline-block;
+        	visibility: visible;
+        	border: 2px solid var(--primary);
+    	}
+
+    	&>input:checked:after {
+    	    width: 15px;
+    	    height: 15px;
+    	    border-radius: 15px;
+    	    top: 0px;
+    	    left: 0px;
+    	    position: relative;
+    	    background-color: var(--primary);
+    	    content: '';
+    	    display: inline-block;
+    	    visibility: visible;
+    	    border: 2px solid var(--primary);
+    	}
+
+	}
+
 `
 
 export const RightContainer = styled.div`

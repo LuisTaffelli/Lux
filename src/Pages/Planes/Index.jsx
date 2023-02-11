@@ -2,7 +2,8 @@
 import {
 	TopSection,
 	GeneralPlan,
-	CardPlan
+	CardPlan,
+	PlanPersonalizado
 } from './Components';
 
 import PlanesInfo from './PacksContent.json';
@@ -10,9 +11,6 @@ import PlanesInfo from './PacksContent.json';
 
 
 export default function Planes (){
-
-
-	console.log(PlanesInfo)
 
 
 
@@ -31,6 +29,7 @@ export default function Planes (){
 				Index={Index}
 				Extras={Extras}
 				/>) : null}
+			<PlanPersonalizado />
 		</>
 
 	)

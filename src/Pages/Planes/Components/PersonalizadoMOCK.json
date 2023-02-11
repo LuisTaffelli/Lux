@@ -1,0 +1,70 @@
+{
+	"FirstHalf":[
+		{
+			"Text":"Community manager (manejo de redes)",
+			"ID": 1
+		},
+		{
+			"Text":"Estrategia de marketing ",
+			"ID": 2
+		},
+		{
+			"Text":"Creación de perfiles en redes",
+			"ID": 3
+		},
+		{
+			"Text":"Publicidad (Meta y Google Ads)",
+			"ID": 4
+		},
+		{
+			"Text":"Chatbot ",
+			"ID": 5
+		},
+		{
+			"Text":"Fotógrafo", 
+			"ID": 6
+		},
+		{
+			"Text":"Filmmaker ",
+			"ID": 7
+		},
+		{
+			"Text":"Creación de landing page ",
+			"ID": 8
+		}
+	],
+	"SecondHalf": [
+		{
+			"Text":"Diseño/rediseño de logo ",
+			"ID": 9
+		},
+		{
+			"Text":"Diseño de identidad visual ",
+			"ID": 10
+		},
+		{
+			"Text":"Diseño de cartelería ",
+			"ID": 11
+		},
+		{
+			"Text":"Diseño de papelería ",
+			"ID": 12
+		},
+		{
+			"Text":"Diseño de videos ",
+			"ID": 13
+		},
+		{
+			"Text":"Diseño de piezas para RRSS",
+			"ID": 14
+		},
+		{
+			"Text":"Diseño de render ",
+			"ID": 15
+		},
+		{
+			"Text":"Oficina conteiner",
+			"ID": 16
+		}	
+	]
+}

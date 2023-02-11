@@ -20,7 +20,7 @@ import { Header, LogoContainer, Nav } from './NavbarElements';
 /**
  * to change links modify Links.js file
  */
-function Navbar({ state, toggle }) {
+function Navbar({ state, toggle, SectionSetter }) {
   const landing = isLanding();
   // const dispatch = useDispatch();
 
@@ -35,7 +35,7 @@ function Navbar({ state, toggle }) {
   const HandleColor = (event)=>{
     setBgColor('--primary-dark1')
 
-    if(event.path[1].scrollY === 0){
+    if(window.pageYOffset === 0){
       setBgColor('--transparent')
     }
   }

@@ -12,6 +12,7 @@
     "lint.fix": "eslint ./ --fix"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "axios": "^0.26.1",
     "bootstrap": "^5.2.3",
     "framer-motion": "^6.3.11",
@@ -62,10 +63,10 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "gh-pages": "^4.0.0",
     "jasmine": "^4.1.0",
-    "sass": "^1.57.1",
     "jasmine-browser-runner": "^1.0.0",
     "jasmine-core": "^4.1.0",
     "prettier": "^2.6.0",
+    "sass": "^1.57.1",
     "vite": "^4.0.0"
   }
 }
