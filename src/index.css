@@ -1,5 +1,5 @@
 :root {
-  font-family: Montserrat, Poppins, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, Poppins, Helvetica, Arial, sans-serif !important;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -61,6 +61,7 @@ a {
 
 body {
   margin: 0;
+  font-family: Montserrat, Poppins, Helvetica, Arial, sans-serif !important;
   display: flex;
   background-image: linear-gradient(to right, #560b26, #780e33, #9b113e, #c01449, #e61952);
   place-items: center;
