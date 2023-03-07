@@ -71,14 +71,12 @@ export default function UsSection ({Scroll}){
 					diseños y estrategias conceptuales que estarán en constante evolución para que su agencia esté
 					conectada con la actualidad
 				</p>
-				<div className='FlexedRow'>
-					<p>
-						Somos conexión entre usuario y propiedad. Somos evolución, crecimiento, desarrollo.
-						<span className='Colored'>
-							Somos Lux.
-						</span>
-					</p>
-				</div>
+				<p>
+					Somos conexión entre usuario y propiedad. Somos evolución, crecimiento, desarrollo.
+					<span className='Colored'>
+						Somos Lux.
+					</span>
+				</p>
 			</TopDescriptionContainer>
 			<BottomTitleContainer>
 				<h2>Nuestros Planes</h2>

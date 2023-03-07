@@ -73,10 +73,10 @@ export const TopTitleContainer = styled.div`
 	color: var(--primary);
 
 	font-size: 38px;
-
 	text-align: right;
 
 	&>h2{
+		font-weight: 600;
 		font-size: calc(1.325rem + 1.9vw);
 	}
 
@@ -135,6 +135,7 @@ export const BottomTitleContainer = styled.div`
 	color: var(--primary);
 
 	font-size: 32px;
+
 
 	text-align: right;
 
@@ -242,6 +243,8 @@ export const InnerCard = styled.div`
 		text-align: center;
 		margin: 8px 0;
 
+		font-family: 'Poppins';
+
 
 		@media screen and (${breakpoints.mobile}){
 			text-align: left;
@@ -261,7 +264,7 @@ export const InnerCard = styled.div`
 
 
 		@media screen and (${breakpoints.pc}){
-			font-size: calc(0.425rem + .6vw);
+			font-size: calc(0.325rem + .6vw);
 		}
 	}
 

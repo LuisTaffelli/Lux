@@ -104,7 +104,7 @@ export const MainContainer = styled(Container)`
 	.Bubbles{
 		position: absolute;
 		width: 30%;
-    	left: 86%;
+    	left: 88%;
     	top: 15%;
 		transform: scaleX(-1);
 		animation-name: ArrAbaPelotas;
@@ -227,7 +227,7 @@ export const RowContainer = styled(Row)`
     	height: 120%;
     	left: 0;
     	top: 0;
-    	transform: translateX(-8.4%) translateY(-2%);
+    	transform: translateX(-8%) translateY(-2%);
     	z-index: 2;
 	}
 
@@ -276,7 +276,8 @@ export const InnerTitle = styled(Col)`
 		margin: 20px 0;
 		@media screen and (${breakpoints.ipad}){
 			width: 80%;
-			margin: 20px auto;
+			margin: 30px auto 8px auto;
+			font-size: calc(0.9rem + 0.9vw);
 		}
 	}
 

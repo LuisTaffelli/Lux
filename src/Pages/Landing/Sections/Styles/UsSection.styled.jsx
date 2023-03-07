@@ -98,6 +98,10 @@ export const TopTitleContainer = styled.div`
 
 	font-size: 32px;
 
+	&>h2{
+		font-weight: 600;
+	}
+
 	&:after{
 		content: "";
 		position: absolute;
@@ -123,6 +127,8 @@ export const TopDescriptionContainer = styled.div`
 	margin: 40px 0 0 6%;
 
 	font-size: 1.2rem;
+
+	font-family: 'Poppins';
 
 	.FlexedRow{
 		display: flex;
@@ -155,6 +161,10 @@ export const BottomTitleContainer = styled.div`
 
 	text-align: right;
 
+	&>h2{
+		font-weight: 600;
+	}
+
 	&:after{
 		content: "";
 		position: absolute;
@@ -182,6 +192,7 @@ export const BottomDescriptionContainer = styled.div`
 
 	font-size: 1.2rem;
 
+	font-family: 'Poppins';
 
 `
 

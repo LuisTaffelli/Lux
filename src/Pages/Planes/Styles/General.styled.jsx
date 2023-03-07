@@ -20,7 +20,7 @@ export const MainContainer = styled.section`
 
 
 
-	padding-top: 100px;
+	padding-top: 80px;
 	
 	.RightCorner{
 		position: absolute;
@@ -72,6 +72,7 @@ export const MainWrapper = styled.div`
 	.GreyInfo{
 		margin: 8px 0;
 		color: #777;
+		font-family: 'Poppins';
 	}
 
 	.Title{
@@ -84,9 +85,11 @@ export const MainWrapper = styled.div`
 		font-weight: 600;
 	}
 	.Description{
+		font-family: 'Poppins';
 		margin: 8px 0;
 	}
 	.Offers{
+		font-family: 'Poppins';
 		font-weight: 600;
 	}
 
@@ -194,6 +197,7 @@ export const LeftContainer = styled.div`
 
 	.PackInfoPersonalizado{
 		display: flex;
+		font-family: 'Poppins';
 	}
 
 	.PersonalizadoLeft{
@@ -282,6 +286,7 @@ export const RightContainer = styled.div`
 
 	.PackInfoPersonalizado{
 		display: flex;
+		font-family: 'Poppins';
 	}
 
 	.PersonalizadoLeft{

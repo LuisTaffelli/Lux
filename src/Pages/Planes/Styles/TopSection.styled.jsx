@@ -86,6 +86,7 @@ export const MainContainer = styled.section`
 	.Description{
 		margin-top: 20px;
 		font-weight: 400;
+		font-family: 'Poppins';
 	}
 
 	@media screen and (${breakpoints.ipad}){

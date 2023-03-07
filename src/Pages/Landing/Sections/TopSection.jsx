@@ -20,7 +20,7 @@ import {
 import Bubbles from '../../../Images/ESFERAS.png'
 
 import BackgroundWhite from '../../../Images/TopBackground.svg'
-import Mirror from '../../../Images/Vidrio_4.png'
+import Mirror from '../../../Images/Vidrio_5.png'
 import BotonVidrio1 from '../../../Images/Boton_1.png'
 import BotonVidrio2 from '../../../Images/Boton_2.png'
 import Logo2 from '../../../Images/LOGO_2.svg'
