@@ -1535,6 +1535,7 @@ Error generating stack: `+i.message+`
 		width: 70%;
 		margin: 40px 0;
 		font-size: 14px;
+		text-align: left;
 		@media screen and (${M.ipad}){
 			font-size: 18px;
 		}
