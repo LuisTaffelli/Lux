@@ -283,7 +283,7 @@ export const InnerTitle = styled(Col)`
 	@media screen and (${breakpoints.mobile}){
 		&>h3{
 			width: 60%;
-			font-size: 1.6rem;
+			font-size: calc(0.6rem + 0.9vw);
 		}
 		&>p{
 			font-size: 1.2rem;
