@@ -1295,7 +1295,7 @@ Error generating stack: `+i.message+`
 	@media screen and (${M.mobile}){
 		&>h3{
 			width: 60%;
-			font-size: 1.6rem;
+			font-size: calc(0.6rem + 0.9vw);
 		}
 		&>p{
 			font-size: 1.2rem;
@@ -1496,7 +1496,7 @@ Error generating stack: `+i.message+`
 
 	border-radius: 32px;
 
-	height: 500px;
+	height: 600px;
 
 	width: 90%;
 
@@ -1521,13 +1521,29 @@ Error generating stack: `+i.message+`
 		color: var(--primary);
 		font-weight: 600;
 		font-family: 'Poppins';
+		@media screen and (${M.pc}){
+			font-size: calc(1.125rem + 0.9vw);
+			text-align: center;
+		}
+		@media screen and (${M.pcFullRes}){
+			font-size: calc(1.425rem + 0.9vw);
+			text-align: center;
+		}
 	}
 
 	&>h5{
 		width: 70%;
 		margin: 40px 0;
-		@media screen and (${M.mobile}){
+		font-size: 14px;
+		@media screen and (${M.ipad}){
 			font-size: 18px;
+		}
+		@media screen and (${M.mobile}){
+			font-size: 14px;
+		}
+		@media screen and (${M.pcFullRes}){
+			font-size: calc(0.125rem + 0.9vw);
+			text-align: center;
 		}
 	}
 
