@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {breakpoints} from '../../../../Utils/breakpoints'
 
 
 export const PlanesContainer = styled.div`
@@ -7,6 +8,13 @@ export const PlanesContainer = styled.div`
 
 	flex-direction: column;
 
+	& a{
+		transition: color ease-in .5s;
+
+		&>h2{
+			transition: font-size ease-in .5s;
+		}
+	}
 
 	&>button{
 		color: var(--primary);
@@ -14,7 +22,12 @@ export const PlanesContainer = styled.div`
     	margin: 40px 0 40px 6%;
 	}
 
-
+	& a:hover{
+		color: var(--primary-dark1);
+		&>h2{
+			font-size: calc(1.525rem + 0.9vw)
+		}
+	}
 
 `
 
@@ -90,7 +103,7 @@ export const TopTitleContainer = styled.div`
 		position: absolute;
 		height: 3px;
 		left: 0;
-		bottom: -26px;
+		bottom: 0;
 		width: 26%;
 		background-color: var(--primary);
 	}
@@ -147,7 +160,7 @@ export const BottomTitleContainer = styled.div`
 		position: absolute;
 		height: 3px;
 		right: 0;
-		bottom: -26px;
+		bottom: 0;
 		width: 20%;
 		background-color: var(--primary);
 	}
@@ -183,7 +196,11 @@ export const CardsContainer = styled.div`
 
 	justify-content: space-around;
 
+	flex-wrap: wrap;
 
+	@media screen and (${breakpoints.pc}){
+		flex-wrap: no-wrap;
+	}
 
 `
 
@@ -197,20 +214,53 @@ export const InnerCard = styled.div`
 
 	align-items: center;
 
-	box-shadow: 0 0.5rem 2rem var(--primary);
+	box-shadow: -10px 3px 1rem 0px rgba(230, 25, 82, .5);
 
-	border-radius: 24px;
+	border-radius: 32px;
 
-	height: 400px;
+	height: 500px;
 
-	width: 25%;
+	width: 90%;
+
+	margin: 12px 0;
+
+	transition: transform ease-in 0.6s;
 
 
-	&>h3{
-		margin-top: 20px;
-		color: var(--primary);
+	&:hover{
+		background: var(--gradient1);
+		color: #FFF;
+
+		transform: scale(1.1);
+
+		&>h2{
+			color: #FFF !important;
+		} 
 	}
 
+	&>h2{
+		margin-top: 20px;
+		color: var(--primary);
+		font-weight: 600;
+		font-family: 'Poppins';
+	}
+
+	&>h5{
+		width: 70%;
+		margin: 40px 0;
+		@media screen and (${breakpoints.mobile}){
+			font-size: 18px;
+		}
+	}
+
+	@media screen and (${breakpoints.mobile}){
+		width: 90%;
+		margin: 12px 0; 
+	}
+
+	@media screen and (${breakpoints.pc}){
+		width: 25%;
+	}
 
 
 `

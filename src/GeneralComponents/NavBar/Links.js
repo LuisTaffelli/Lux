@@ -14,7 +14,8 @@ export const links = [
   },
   {
     label: 'Info',
-    to: '/Info',
+    to: '/',
+    anchorTo: 'Info'
   },
   {
     label: 'Planes',
@@ -22,7 +23,8 @@ export const links = [
   },
   {
     label: 'Contacto',
-    to: '/Contacto',
+    to: '',
+    anchorTo: 'Contacto'
   },
 ];
 

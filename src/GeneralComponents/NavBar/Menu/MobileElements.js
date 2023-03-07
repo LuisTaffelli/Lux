@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { breakpoints } from '../../../Utils/breakpoints';
 
+
+
 export const MobileMenu = styled.div`
   display: flex;
   flex-flow: column;
@@ -13,10 +15,9 @@ export const MobileMenu = styled.div`
   left: 0;
   transform: translate(-100%, 0);
   min-width: max-content;
-  width: 60%;
-  max-width: 325px;
+  width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background: linear-gradient(180deg, rgba(7,7,7, .9), var(--secondary-dark));
   box-shadow: 0 0 1rem #0004;
 
   padding: 1rem 0;
@@ -28,7 +29,7 @@ export const MobileMenu = styled.div`
   }
 
   @media screen and (${breakpoints.pc}) {
-    display: none;
+    display: flex;
   }
 
   ${({ show }) =>
@@ -37,9 +38,11 @@ export const MobileMenu = styled.div`
           transform: translate(0, 0);
         `
       : css`
-          transform: translate(-100%, 0);
+          transform: translate(0, -100%);
         `}
 `;
+
+
 
 export const Container = styled.div`
   width: 85%;
@@ -48,7 +51,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   flex-flow: column;
-  padding: 0 1rem;
+  padding: 7rem 1rem;
 
   .menu {
     display: block;
@@ -60,6 +63,7 @@ export const MobileLink = styled(Link)`
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 0.25rem 0 0.25rem 0;
 
@@ -67,10 +71,10 @@ export const MobileLink = styled(Link)`
 
   margin: 0.75rem 0;
   text-decoration: none;
-  font-size: 0.65rem;
-  font-weight: 400;
+  font-size: 0.85rem;
+  font-weight: 700;
   letter-spacing: 1px;
-  color: #666;
+  color: #FFF;
 
   .icon {
     color: #000;
@@ -95,9 +99,25 @@ export const MobileLink = styled(Link)`
 export const LinksContainer = styled.ul`
   display: flex;
   flex-flow: column;
-  height: max-conent;
-  align-items: flex-start;
+  height: max-content;
+  align-items: center;
+
+  z-index: 1002;
+  padding: 0;
 `;
+
+export const Decoration = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  z-index: 1000;
+  top: 0px;
+  background: linear-gradient(315deg, var(--primary), var(--primary-dark1));
+
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+
+`
 
 export const BottomContainer = styled.ul`
   display: flex;

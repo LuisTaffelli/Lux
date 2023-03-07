@@ -11,7 +11,7 @@ export default ({ children }) => {
 
     })
 
-    var Flag = null
+    const [Flag, setFlag] = useState(null)
 
     let ws;
 
@@ -19,16 +19,17 @@ export default ({ children }) => {
         const ProvObject = {
             ...PersonalInfo,
             name: PackName,
-            text: ExtraOptions
+            text: `Me gustaria contratar ${PackName}`
         }
-        if(!ExtraOptions){
-            ProvObject.text = `Me gustaria contratar ${PackName}`
+        if(ExtraOptions){
+            ProvObject.text = `Me gustaria contratar ${PackName} con ${ExtraOptions}`
         }
 
         setPersonalInfo(ProvObject)
 
     }
 
+    
 
 
     
@@ -39,7 +40,10 @@ export default ({ children }) => {
     ws = {
         PersonalInfo,
         PlanHandler,
-        Flag
+        Flag,
+        ChangeFlag : ()=>{
+            setFlag((old)=>!old)
+        },
     }
     
 

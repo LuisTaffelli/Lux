@@ -102,8 +102,15 @@ function Navbar({ state, toggle, SectionSetter }) {
     <>
       <Header isLanding={landing} 
       ref={BackgroundRef} color={BgColor} 
-      onScroll={HandleColor}>
+      onScroll={HandleColor} show={state}>
         <Nav>
+          <Menu
+            links={links}
+            mobile
+            state={state}
+            toggle={toggle}
+            SectionSetter={SectionSetter}
+          /> 
           <LogoContainer>
             <Link className="logo-container" to="/">
               <Logo theme={landing ? 'dark' : 'light'} className="logo" />
@@ -112,21 +119,12 @@ function Navbar({ state, toggle, SectionSetter }) {
           <Menu
             links={links}
             togglePop={showPopup}
+            SectionSetter={SectionSetter}
           />
 
 
         </Nav>
       </Header>
-
-      {/* <Menu
-        links={linksMobile}
-        mobile
-        // searchbar={searchbar}
-        state={state}
-        togglePop={showPopup}
-        toggle={toggle}
-        user={user}
-      /> */}
 
       {/* {statePopup && !user?.name && <Popup close={hidePopup} />} */}
     </>

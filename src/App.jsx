@@ -18,7 +18,7 @@ function App() {
   
   return (
     <>
-      {/*<Navbar state={state} toggle={toggle} SectionSetter={setSection}/>*/}
+      <Navbar state={state} toggle={toggle} SectionSetter={setSection}/>
       <Routes>
           {/*
             Las rutas van debajo de este comentario con la siguiente estructura:
@@ -34,16 +34,16 @@ function App() {
               </PrivateRoute>}
 
           */}
-          <Route element={<ComingSoon />} exact path="/"/>
+          {/*<Route element={<ComingSoon />} exact path="/"/>*/}
           
-          {/*<Route element={<Landing ScrollTo={Section}/>} exact path="/"/>*/}
+          <Route element={<Landing ScrollTo={Section}/>} exact path="/"/>
 
-          {/*<Route element={<Planes />} exact path="/Planes"/>*/}
+          <Route element={<Planes />} exact path="/Planes"/>
 
           <Route element={<Navigate to="/" />} path="*" />
         </Routes>
-        {/*<TopFooter />*/}
-        {/*<Footer />*/}
+        <TopFooter />
+        <Footer />
     </>
   );
 }

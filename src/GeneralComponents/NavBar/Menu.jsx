@@ -1,10 +1,10 @@
-// import Mobile from './Menu/Mobile';
+import Mobile from './Menu/Mobile';
 import PC from './Menu/PC';
 
 // Menu dinámico para renderizado de pc o mobile
 
-function Menu({ user, links, state, toggle, mobile, togglePop, searchbar }) {
-  const Component = PC;
+function Menu({ user, links, state, toggle, mobile, togglePop, searchbar, SectionSetter }) {
+  const Component = mobile ? Mobile : PC;
 
   return (
     <Component
@@ -14,6 +14,7 @@ function Menu({ user, links, state, toggle, mobile, togglePop, searchbar }) {
       toggle={toggle}
       togglePop={togglePop}
       searchbar={searchbar}
+      SectionSetter={SectionSetter}
     />
     
   );

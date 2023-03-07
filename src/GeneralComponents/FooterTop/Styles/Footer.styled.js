@@ -33,7 +33,7 @@ export const FooterSection = styled.section`
 
         width: 10%;
 
-        margin-top: 16px;
+        padding-top: 16px;
 
         max-height: 100px;
 
@@ -84,6 +84,14 @@ export const FooterSection = styled.section`
 
         color: #FFF;
 
+        .IconsContainer{
+            width: 90%;
+            justify-content: flex-end;
+
+            &>*{
+                margin: 0 8px;
+            }
+        }
 
         .Text{
 

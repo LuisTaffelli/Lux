@@ -25,16 +25,19 @@ import FadeIn from './Animations';
 
 
 
-export default function Landing() {
+export default function Landing({
+  ScrollTo
+}) {
 
   const [heroIsLoaded, setHeroIsLoaded] = useState(false);
+
 
 
   return (
     <Main>
       <TopSection />
-      <UsSection />
-      <PortfolioSection />
+      <UsSection Scroll={ScrollTo}/>
+      {/*<PortfolioSection />*/}
       <OfferSection />
     </Main>
   )

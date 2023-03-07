@@ -18,7 +18,7 @@ import LeftCorner from '../../../Images/Decoracion_7.svg'
 
 const Mockup = [
 	{
-		title: 'Community Manager',
+		title: 'Community<br>Manager',
 		img: ComMan,
 		className: 'CM',
 		lightText: 'Estar activo en redes es importante para generar posibles compradores.',
@@ -37,7 +37,7 @@ const Mockup = [
 		boldText: ['Creación de logo, Identidad visual, realización de piezas para R.R.S.S'],
 	},
 	{
-		title: 'Coach',
+		title: 'Coaching',
 		img: Coach,
 		lightText: 'Para quienes quieran administrar sus propias RRSS ofrecemos unas tutorías prácticas e introductoras.',
 		boldText: ['- Diseño','- Community Manager','- Rubro inmobiliario'],
@@ -51,16 +51,16 @@ export default function OfferSection (){
 
 	return (
 		<MainContainer>
-			<img src={LeftCorner} className='LeftCorner'/>
+			{/*<img src={LeftCorner} className='LeftCorner'/>*/}
 			<TopTitleContainer>
 				<h2>¿Qué Ofrecemos?</h2>
 			</TopTitleContainer>
 			<CardsContainer>
-				{Mockup.map((el)=><InnerCard>
+				{Mockup.map((el, index)=><InnerCard key={index+el.title}>
 					<img src={el.img} className={el.className}/>
-					<h3>{el.title}</h3>
-					<p>{el.lightText}</p>
-					{el.boldText.map(text=><h5>{text}</h5>)}
+					<h3 className="fs-3" dangerouslySetInnerHTML={{__html: el.title}}/>
+					<p className="fs-6">{el.lightText}</p>
+					{el.boldText.map(text=><h5 className="fs-7" key={text}>{text}</h5>)}
 				</InnerCard>)}
 			</CardsContainer>
 

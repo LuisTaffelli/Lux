@@ -9,14 +9,7 @@ import {
 	RightContainer
 } from '../Styles/General.styled'
 
-import WhatsappIcon from '../../../Images/whatsapp.svg'
-import WhatsappLink from '../../../Utils/WhatsappLink'
-
-
-
-
-
-
+import WhatsappLink from '../../../Utils/WhatsappLink'	
 
 
 export default function CardsPlanes({
@@ -28,21 +21,51 @@ export default function CardsPlanes({
 	const PackContentRef = useRef()
 	const InfoContent = useRef()
 
+	const [packContent, setPackContent] = useState(new Map())
+
+	const HandleChange = (event)=>{
+
+		const {value, id} = event.target
+		
+		const ProvMap = packContent
+
+		if(ProvMap.has(id)){
+			ProvMap.delete(id)
+			return;
+		}
+
+		ProvMap.set(id, value)
+
+		setPackContent(ProvMap)
+
+		return;
+	}
+
 
 	const WhatsappHandler = ()=>{
 
-		
+		if(packContent.size){
+			return WhatsappLink(`Hola! Me gustaría solicitar el plan de ${Title}-${PackName.split('#')[1]} con algunos Extras`)			
+		}
+
 		return WhatsappLink(`Hola! Me gustaría solicitar el plan de ${Title}-${PackName.split('#')[1]}`)
 	}
 
 	const HandleSubmit = ()=>{
 
+		const ProvArr = []
+
+		packContent.forEach((el)=>{
+			ProvArr.push(el)
+		})
+
 		const TemplateParams = {
-			PackName: PackName.split('#')[1]
+			PackName: PackName.split('#')[1],
+			ExtraOptions: ProvArr.join('-')
 		}
 
 		ws.PlanHandler(TemplateParams)
-
+		ws.ChangeFlag()
 
 	}
 
@@ -69,86 +92,82 @@ export default function CardsPlanes({
 		<MainContainer> 
 			<MainWrapper>
 				<LeftContainer>
-					<div className="Title fs-1 Luxed">
-						{Title}
-					</div>
-					<div className="SubTitle fs-4">
+					<div className="Title fs-1">
 						Pack <span className="Luxed">{PackName}</span>
 					</div>
 					<div ref={DescriptionContentRef} className="Description fs-6"/>
 					<div className="Offers fs-6" ref={PackContentRef} />
-					<div className="ExtrasContainer">
-						{Extras ? Extras.map((el, Extraindex)=>
-							<div className="ExtrasInner" key={Extraindex + el[0]}>
-								<span className="Extras fs-6">{el}</span>
-							</div>) 
+					<div className="PackInfoPersonalizado">
+						<div className="PersonalizadoLeft">
+						{Extras ? Extras.map((el, Extraindex)=><div className="CustomCheckbox" key={Extraindex + el[0]}>
+								<input onChange={HandleChange} type="checkbox" id={Extraindex + el[0]} value={el}/>
+                    		    <label htmlFor={Extraindex + el[0]}>{el}</label>	
+							</div>)
 						: null}
+						</div>
 					</div>
 					{Information ? <div ref={InfoContent} className="GreyInfo fs-6"/>
 					: null}
-					<div className="MediaButtons fs-6">
-						<button onClick={HandleSubmit}
-						type="button" className="TextButton">
-							Seleccionar
-						</button>
-						<button type="button" className="WhatsappButton">
-							<a href={WhatsappHandler()} target="_blank">
-								<img src={WhatsappIcon} className="WhatsappIcon"/>
-							</a>
-						</button>
-					</div>
 				</LeftContainer>
 				<RightContainer>
 					<div className="ColorBox">
 						<div className="Arrow"/>
 					</div>
 				</RightContainer>
+				<div className="MediaButtons fs-6">
+					<button onClick={HandleSubmit}
+					type="button" className="TextButton">
+						Seleccionar
+					</button>
+					<button type="button" className="WhatsappButton">
+						<a href={WhatsappHandler()} target="_blank">
+							<div className="WhatsappIcon"/>
+						</a>
+					</button>
+				</div>
 			</MainWrapper>
-			{Title ? <BottomLine /> : null}
 		</MainContainer>
 	)
 	}
 
 	return(
-		<MainContainer> 
-			<MainWrapper>
-				<LeftContainer>
+		<MainContainer Status="Colored"> 
+			<MainWrapper position="Right">
+				<LeftContainer position="Right">
 					<div className="ColorBox">
 						<div className="Arrow"/>
 					</div>
 				</LeftContainer>
 				<RightContainer>
-					<div className="Title fs-1 Luxed">
-						{Title}
-					</div>
-					<div className="SubTitle fs-4">
+					<div className="Title fs-1">
 						Pack <span className="Luxed">{PackName}</span>
 					</div>
 					<div ref={DescriptionContentRef} className="Description fs-6"/>
 					<div className="Offers fs-6" ref={PackContentRef} />
-					<div className="ExtrasContainer">
-						{Extras ? Extras.map((el, Extraindex)=>
-							<div className="ExtrasInner" key={Extraindex + el[0]}>
-								<button className="Extras fs-6" type="button">	{el} </button>
-							</div>) 
+					<div className="PackInfoPersonalizado">
+						<div className="PersonalizadoLeft">
+						{Extras ? Extras.map((el, Extraindex)=><div className="CustomCheckbox" key={Extraindex + el}>
+								<input onChange={HandleChange} type="checkbox" id={Extraindex + el} value={el}/>
+                    		    <label htmlFor={Extraindex + el}>{el}</label>	
+							</div>)
 						: null}
+						</div>
 					</div>
 					{Information ? <div ref={InfoContent} className="GreyInfo fs-6"/>
 					: null}
-					<div className="MediaButtons fs-6">
-						<button onClick={HandleSubmit}
-						type="button" className="TextButton">
-							Seleccionar
-						</button>
-						<button type="button" className="WhatsappButton">
-							<a href={WhatsappHandler()} target="_blank">
-								<img src={WhatsappIcon} className="WhatsappIcon"/>
-							</a>
-						</button>
-					</div>
 				</RightContainer>
+				<div className="MediaButtons fs-6">
+					<button onClick={HandleSubmit}
+					type="button" className="TextButton">
+						Seleccionar
+					</button>
+					<button type="button" className="WhatsappButton">
+						<a href={WhatsappHandler()} target="_blank">
+							<div className="WhatsappIcon"/>
+						</a>
+					</button>
+				</div>
 			</MainWrapper>
-			{Title ? <BottomLine /> : null}
 		</MainContainer>
 	)
 }

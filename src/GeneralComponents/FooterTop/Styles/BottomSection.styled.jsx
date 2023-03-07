@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import BackgroundImage from '../../../Images/Footer_degradado.svg';
-
+import {breakpoints} from '../../../Utils/breakpoints'
 
 
 
@@ -23,6 +23,11 @@ export const MainContainer = styled.section`
 		width: 13%;
 		top: 0;
 		right:0;
+	}
+
+	@media screen and (${breakpoints.ipad}){
+		flex-direction: column;
+		padding-bottom: 16px;
 	}
 
 `
@@ -55,6 +60,20 @@ export const TextContainer = styled.div`
 		outline: none;
 
 		height: 200px;
+	}
+
+
+	@media screen and (${breakpoints.ipad}){
+		width: 60%;
+
+		margin-left: 14%;
+
+		align-items: flex-start;
+
+		.Text{
+			width: 100%;
+		}
+
 	}
 
 `
@@ -115,6 +134,10 @@ export const InputsContainer = styled.div`
 
 	margin: 4% 0 0 14%;
 
+	@media screen and (${breakpoints.ipad}){
+		width: 60%;
+	}
+
 
 `
 
@@ -135,6 +158,10 @@ export const TopInput = styled.div`
 
 	.Selector{
 		border-radius: 999999px;
+	}
+
+	@media screen and (${breakpoints.ipad}){
+		width: unset;
 	}
 
 

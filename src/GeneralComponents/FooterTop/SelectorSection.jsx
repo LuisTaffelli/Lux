@@ -18,12 +18,12 @@ import Bubbles from '../../Images/ESFERAS.png'
 import BackgroundWhite from '../../Images/Decoracion_6.svg'
 
 const Options =[ 
+	{ value: 'Iniciate', label: 'Iniciate' },
 	{ value: 'Reinventate', label: 'Reinventate' },
-	{ value: 'Iniciante', label: 'Iniciante' },
 	{ value: 'Desarrollos', label: 'Desarrollos' },
-	{ value: 'Desarrollos en apuros', label: 'Desarrollos en apuros' },
-	{ value: 'Inmobiliarias', label: 'Inmobiliarias' },
-	{ value: 'Inmobiliarias en apuros', label: 'Inmobiliarias en apuros' },
+	{ value: 'Seguimiento 1', label: 'Seguimiento 1' },
+	{ value: 'Seguimiento 2', label: 'Seguimiento 2' },
+	{ value: 'Marca Personal', label: 'Marca Personal' },
 	{ value: 'Personalizado', label: 'Personalizado' }
 ]
 
@@ -44,7 +44,7 @@ export default function BottomSection (){
 
 	const ws = useContext(WebSocketContext)
 	const [defaultSelectedValue, setDefaultSelectedValue] = useState(null)
-	const [TextMail, setTextMail] = useState(null)
+	const [TextMail, setTextMail] = useState(undefined)
 	const [UserEmail, setUserEmail] = useState(null)
 	const [EnterpriseName, setEnterpriseName] = useState(null)
 	const divRef = useRef(null);
@@ -54,10 +54,16 @@ export default function BottomSection (){
 	}
 
 	useEffect(()=>{
+
+		if(!ws.Flag){
+			return undefined;
+		}
+
 		const NewArr = Options.filter((el)=>el.value === ws.PersonalInfo.name)[0]
-		setDefaultSelectedValue(NewArr)
-		setTextMail(ws.PersonalInfo.text)
-		ScrollToBottom()
+		setDefaultSelectedValue(NewArr);
+		setTextMail(ws.PersonalInfo.text);
+		ScrollToBottom();
+		return undefined;
 	},[ws])
 
 	const HandleChange = (Selected)=>{

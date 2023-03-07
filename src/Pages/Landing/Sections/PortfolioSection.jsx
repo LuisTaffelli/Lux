@@ -52,7 +52,8 @@ export default function PortfolioSection (){
 				</p>
 			</TopDescriptionContainer>
 			<CardsContainer>
-				{Mockup.map((el)=><InnerCard>
+				{Mockup.map((el, index)=><InnerCard key={index + (new Date())} 
+					CardNumber={index}>
 					<div className='card'/>
 					<h3>{el.title}</h3>
 				</InnerCard>)}

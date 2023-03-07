@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 import { breakpoints } from '../../Utils/breakpoints';
+import Menu_Hambur from '../../Images/Menu_Hambur.svg';
+import Menu_Close_Amarillo from '../../Images/Menu_Close_Amarillo.svg';
 
 export const Header = styled.header`
   padding: 1rem 0;
@@ -8,10 +10,22 @@ export const Header = styled.header`
   left: 0;
   min-width: 100vw;
 
-  z-index: 500;
+  z-index: 1002;
   box-shadow: 0 0.5rem 0.75rem #0001;
 
   transition: all 0.7s ease-in;
+
+  .Icon{
+    background: url(${props=> props.show ? 
+    Menu_Close_Amarillo
+    : 
+    Menu_Hambur 
+    });
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+  }
 
   ${({ isLanding, color }) =>
     isLanding
@@ -55,6 +69,8 @@ export const Nav = styled.nav`
   }
 
   @media screen and (${breakpoints.ipad}) {
+    justify-content: flex-start;
+    padding: 0 0 0 2%;
     .logo-container {
       width: 10rem;
     }
@@ -71,6 +87,7 @@ export const Nav = styled.nav`
 
   .menu {
     display: block;
+    z-index: 1001;
 
     @media screen and (${breakpoints.pc}) {
       display: none;
@@ -84,6 +101,17 @@ export const LogoContainer = styled.div`
 
   align-items: center;
   margin-right: 12px;
+
+  z-index: 1001;
+
+
+  @media screen and (${breakpoints.ipad}) {
+    margin-left: 18%;
+  }
+
+  @media screen and (${breakpoints.mobile}) {
+    margin-left: 0;
+  }
 
 
 `

@@ -54,8 +54,8 @@ export default function CardsPlanes(){
 			ExtraOptions: ProvArr.join('-')
 		}
 
-		ws.PlanHandler(TemplateParams)
-
+		ws.PlanHandler(TemplateParams);
+		ws.ChangeFlag()
 
 	}
 
@@ -72,10 +72,7 @@ export default function CardsPlanes(){
 		<MainContainer> 
 			<MainWrapper>
 				<LeftContainer>
-					<div className="Title fs-1 Luxed">
-						PERSONALIZA TU PACK
-					</div>
-					<div className="SubTitle fs-4">
+					<div className="Title fs-1">
 						Pack <span className="Luxed">#Personalizado</span>
 					</div>
 					<div className="Description fs-6">
@@ -87,7 +84,7 @@ export default function CardsPlanes(){
 						<div className="PersonalizadoLeft">
 							{
 								MockData.FirstHalf.map((el)=>
-								<div className="CustomCheckbox">
+								<div className="CustomCheckbox" key={el.ID}>
 									<input onChange={HandleChange} type="checkbox" id={el.ID} value={el.Text}/>
                                     <label htmlFor={el.ID}>{el.Text}</label>	
 								</div>)
@@ -96,7 +93,7 @@ export default function CardsPlanes(){
 						<div className="PersonalizadoRight">
 							{
 								MockData.SecondHalf.map((el)=>
-								<div className="CustomCheckbox">
+								<div className="CustomCheckbox" key={el.ID}>
 									<input onChange={HandleChange} type="checkbox" id={el.ID} value={el.Text}/>
                                     <label htmlFor={el.ID}>{el.Text}</label>	
 								</div>)
@@ -106,23 +103,23 @@ export default function CardsPlanes(){
 					<div className="GreyInfo fs-6">
 						Una vez que tengas los servicios seleccionados presiona el botón de “seleccionar” o el de whatsapp para hablarnos y cotizar tu pack.
 					</div>
-					<div className="MediaButtons fs-6">
-						<button onClick={HandleSubmit}
-						type="button" className="TextButton">
-							Seleccionar
-						</button>
-						<button type="button" className="WhatsappButton">
-							<a href={WhatsappHandler()} target="_blank">
-								<img src={WhatsappIcon} className="WhatsappIcon"/>
-							</a>
-						</button>
-					</div>
 				</LeftContainer>
 				<RightContainer>
 					<div className="ColorBox">
 						<div className="Arrow"/>
 					</div>
 				</RightContainer>
+				<div className="MediaButtons fs-6">
+					<button onClick={HandleSubmit}
+					type="button" className="TextButton">
+						Seleccionar
+					</button>
+					<button type="button" className="WhatsappButton">
+						<a href={WhatsappHandler()} target="_blank">
+							<div className="WhatsappIcon"/>
+						</a>
+					</button>
+				</div>
 			</MainWrapper>
 		</MainContainer>
 	)

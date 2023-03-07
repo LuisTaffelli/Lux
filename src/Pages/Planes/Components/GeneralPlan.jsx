@@ -29,7 +29,7 @@ export default function CardsPlanes(){
 
 		ws.PlanHandler(TemplateParams)
 
-
+		ws.ChangeFlag()
 	}
 
 	const WhatsappHandler = ()=>{
@@ -44,32 +44,16 @@ export default function CardsPlanes(){
 		<MainContainer> 
 			<MainWrapper>
 				<LeftContainer>
-					<div className="Title fs-1 Luxed">
-						General
-					</div>
-					<div className="SubTitle fs-4">
-						Pack <span className="Luxed">#Reinventate</span>
+					<div className="Title fs-1">
+						Pack <span className="Luxed">#Iniciate</span>
 					</div>
 					<div className="Description fs-6">
-						Todo evoluciona con el tiempo, tu marca también debe hacerlo! Sobre todo<br/>
-						en un ambiente competitivo como el inmobiliario y de desarrollos, destacar<br/>
-						del resto y mantenerse fresco es clave y eso es lo que te ofrecemos en 
-						<span className="Luxed"> Lux.</span>
+						¿Recién está iniciando en el mercado inmobiliario? ¡En <span className="Luxed">Lux</span> tenemos un pack perfecto con estrategias y herramientas de marketing y diseño para ayudarte a impulsar tu negocio y que arranques con todo!<br/>
+						Incluye diseño de logo e identidad corporativa para destacar de la competencia, diseño de papelería, gestión de redes sociales, publicidad en línea y email marketing para conectar aún más con tu público. De esta forma aumentá tu visibilidad, atraé más clientes y hacé crecer tu marca a largo plazo.<br/>
+						Para partir con ventaja en este mercado, es necesario que tu marca se distinga del resto con una comunicación e identidad profesional; Contactanos para más información.
 					</div>
 					<div className="Offers fs-6">
-						Logo - identidad visual - posteos de redes - papelería institucional (flyers,<br/> 
-						cartas, sobres, tarjetas de presentación, etc.) y cartelería.
-					</div>
-					<div className="MediaButtons fs-6">
-						<button onClick={HandleSubmit}
-						type="button" className="TextButton">
-							Seleccionar
-						</button>
-						<button type="button" className="WhatsappButton">
-							<a href={WhatsappHandler()} target="_blank">
-								<img src={WhatsappIcon} className="WhatsappIcon"/>
-							</a>
-						</button>
+						Logo - identidad visual - papelería (flyers, cartas, tarjetas de presentación, etc.) - posteos en redes - publicidad (Meta y Google Ads) -  email marketing - cartelería - sitio web.
 					</div>
 				</LeftContainer>
 				<RightContainer>
@@ -77,8 +61,18 @@ export default function CardsPlanes(){
 						<div className="Arrow"/>
 					</div>
 				</RightContainer>
+				<div className="MediaButtons fs-6">
+					<button onClick={HandleSubmit}
+					type="button" className="TextButton">
+						Seleccionar
+					</button>
+					<button type="button" className="WhatsappButton">
+						<a href={WhatsappHandler()} target="_blank">
+							<div className="WhatsappIcon"/>
+						</a>
+					</button>
+				</div>
 			</MainWrapper>
-			<BottomLine />
 			<img src={RightCorner} className="RightCorner"/>
 		</MainContainer>
 	)

@@ -1,45 +1,41 @@
 [
 	{
 		"Title": "",
-		"Description": "Para partir con ventaja en el mercado, es necesario que tu marca o desarrollo <br/> se distinga del resto, para eso necesitás una identidad visual profesional<br/> y memorable; en <span class='Luxed'> Lux </span>, tenemos el pack perfecto para que arranques<br/> con todo.",
-		"Name": "#Iniciante",
-		"Offers": "Diseño de logo - selección de paleta cromática - fuente tipográfica <br/> identidad visual - posteos en redes - papelería institucional (flyers, cartas, <br/> sobres, tarjetas de presentación, etc.) y cartelería"
+		"Description": "Este pack ofrece una oportunidad única para transformar la imagen de tu empresa en algo moderno y fresco. Con este pack tendrás todas las herramientas necesarias para atraer a más clientes potenciales y aumentar su presencia en el mercado.<br/><br/>Ofrecemos una amplia gama de servicios, desde la renovación de su logo y sitio web hasta la creación de una nueva identidad visual coherente con la esencia de su empresa. Además, nuestro equipo de marketing trabajará con usted para desarrollar una estrategia de marketing efectiva que se adapte a sus objetivos y necesidades. También incluimos servicios como posteos en redes sociales, papelería institucional y cartelería para garantizar una presencia visual atractiva y coherente en todas las plataformas.<br/><br/>¡Todo evoluciona con el tiempo, tu marca también debe hacerlo! En un ambiente competitivo destacar del resto y mantenerse fresco es clave; eso es lo que te ofrecemos en <span className='Luxed'>Lux</span>.<br/>Comprando este pack te damos 1 MES GRATIS de publicidad en Meta (Facebook e Instagram) y Google Ads ",
+		"Name": "#Reinventate",
+		"Offers": "Logo - identidad visual - posteos de redes - estrategia de marketing - papelería institucional (flyers, cartas, tarjetas de presentación, etc.) - cartelería - sitio web."
 	},
 	{
-		"Title": "DESARROLLADORAS",
-		"Description": "Para comercializar un emprendimiento de forma exitosa y eficaz se necesita<br/>llegar a un público objetivo en redes y plataformas de internet<br/> con un impacto visual y comunicativo atractivo, en este pack te ofrecemos todo eso y<br/>más, ya que te damos servicios plus que podés agregar al pack según<br/>tus necesidades.",
+		"Title": "",
+		"Description": "Para comercializar un emprendimiento de forma exitosa y eficaz se necesita llegar a un público objetivo con un impacto visual y comunicativo atractivo, en este pack te ofrecemos todo eso y más, ya que te damos servicios plus que podés agregar al pack según tus necesidades.<br/><br/>Se diseñará un logo e identidad para la marca con el fin de destacar entre la competencia, diseño de cartelería, creación de una landing page con las características más importantes de tu desarrollo, diseño de feed (Instagram) para promocionar tu desarrollo, programación de Chatbot una herramienta que atiende consultas de potenciales compradores de forma inmediata y automática (WhatsApp), papeleria / folleteria y un video tipo intro con logo del emprendimiento para dar más identidad a sus reels y tok toks.",
 		"Name": "#Desarrollos",
-		"Offers": "Logo e identidad del proyecto. Estrategia de marketing, diseño cartelería, landing page,<br/> creación de perfil en Instagram y tiktok, Chatbot, diseño de carpeta, papelería, folletería y videos. ",
+		"Offers": "Logo - identidad del proyecto - cartelería - landing page - diseño de feed - Chatbot - papelería / folletería – videos presentación de logo. ",
 		"Extras":[
-			"+ Diseño de render",
-			"+ Publicidad, Filmmaker, fotógrafo para documentar el seguimiento de la obra mensualmente ",
-			"+ Oficina conteiner para comercializar tu emprendimiento desde el lugar. ",
-			"+ Community manager (manejo de redes)"
+			"Diseño de render",
+			"Publicidad, Filmmaker, fotógrafo para documentar el seguimiento de la obra mensualmente ",
+			"Oficina conteiner para comercializar tu emprendimiento desde el lugar."
 		],
 		"Information": "Los servicios plus agregados modificarán el precio final del pack."
 	},
 	{
 		"Title": "",
-		"Description": "Si tenés el tiempo en contra, ¡no te preocupes! en <span class='Luxed'> Lux </span> te ofrecemos un pack<br/> que te saca de apuros de forma rápida y eficaz.",
-		"Name": "#Desarrollos en apuros",
-		"Offers": "Community manager, pauta publicitaria (google ads y meta),<br/> story y posteos para Instagram",
-		"Information": "Si el proyecto no tiene una identidad visual previamente armada, <br/>el cliente puede solicitar el diseño de piezas para redes y publicidad que influirá en el costo final del pack."
-	},
-	{
-		"Title": "INMOBILIARIAS",
-		"Description": "En <span class='Luxed'> Lux</span>, somos expertos en el rubro inmobiliario, por lo tanto, en este<br/> pack te ofrecemos exactamente lo que necesitas para atraer a tu público<br/> y sobresalir de otros competidores.",
-		"Name": "#Inmobiliarias",
-		"Offers": "Logo e identidad visual de la inmobiliaria, estrategia de marketing, <br/>diseño cartelería, Landing page, creación de perfil en Instagram y tiktok,<br/> Chatbot, diseño de carpeta, papelería, folletería y videos.",
-		"Extras":[
-			"+ diseño de render","+ Publicidad, Filmmaker, fotógrafo para documentar el seguimiento de la obra mensualmente ","+ Oficina conteiner para comercializar tu emprendimiento desde el lugar. ", "+ Community manager (manejo de redes)"
-		],
-		"Information": "Los servicios plus agregados modificarán el precio final del pack."
+		"Description": "¿Querés llevar tus redes al siguiente nivel? Nuestro paquete de seguimiento mensual es la solución perfecta para vos. Tus redes tendrán una estrategia de marketing que te permitirá llegar a tu público ideal, con un seguimiento mensual e informes como evolucionan tus redes<br/><br/>Te ofrecemos atención personalizada de un/a Community Manager y un/a Encargado de Marketing, podrás mantener una presencia en línea sólida y constante. Nuestro equipo de expertos en marketing digital trabajará en crear campañas efectivas y optimizar tus resultados al máximo.",
+		"Name": "#Seguimiento 1",
+		"Offers": "Community manager - estrategia de marketing",
+		"Information": ""
 	},
 	{
 		"Title": "",
-		"Description": "Si tenés el tiempo en contra, ¡no te preocupes! en <span class='Luxed'>Lux </span>te ofrecemos un pack<br/>que te saca de apuros de forma rápida y eficaz",
-		"Name": "#Inmobiliarias en apuros",
-		"Offers": "Community manager - pauta publicitaria (google ads y meta) - story y posteos para Instagram",
-		"Information": "Si el proyecto no tiene una identidad visual previamente armada,<br/> el cliente puede solicitar el diseño de piezas para redes y publicidad que influirá en el costo final del pack."
+		"Description": "¿Estás listo para destacar en el mercado con una marca personal única y memorable? Nuestro pack te ofrece todo lo que necesitas para lograrlo.<br/><br/>Incluye un logo personalizado y una identidad visual que reflejarán tu estilo y personalidad. También tendrás a un Community Manager a tu disposición por tres meses, quien te ayudará a crear una presencia en línea sólida y atractiva. Además, contarás con una Diseñadora de Imagen que te guiará en la selección de la ropa y los accesorios que mejor te representen en reuniones y presentaciones. En resumen, este pack es la solución completa para crear una marca personal auténtica y exitosa. Contactanos para más información.",
+		"Name": "#Seguimiento 2",
+		"Offers": " Community manager - estrategia de marketing - publicidad (Meta y Google Ads)",
+		"Information": ""
+	},
+	{
+		"Title": "",
+		"Description": "¿Estás listo para destacar en el mercado con una marca personal única y memorable? Nuestro pack te ofrece todo lo que necesitas para lograrlo.<br/><br/>Incluye un logo personalizado y una identidad visual que reflejarán tu estilo y personalidad. También tendrás a un Community Manager a tu disposición por tres meses, quien te ayudará a crear una presencia en línea sólida y atractiva. Además, contarás con una Diseñadora de Imagen que te guiará en la selección de la ropa y los accesorios que mejor te representen en reuniones y presentaciones. En resumen, este pack es la solución completa para crear una marca personal auténtica y exitosa. Contactanos para más información.",
+		"Name": "#Marca Personal",
+		"Offers": "logo - identidad visual - community manager - Diseñadora de imagen",
+		"Information": ""
 	}
 ]

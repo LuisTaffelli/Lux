@@ -1,3 +1,4 @@
+import {useEffect, useRef} from 'react'
 import {Link} from 'react-router-dom'
 import {
 	MainContainer, 
@@ -18,23 +19,43 @@ import BackgroundWhite from '../../../Images/Decoracion_Banner_2.svg'
 
 const Mockup = [
 	{
-		title: 'Lorem Ipsum'
+		title: 'Pack #Iniciate',
+		description: '¿Querés que tu negocio inmobiliario inicie con éxito? ¡Entonces necesitás #iniciate! Este pack de marketing inmobiliario completo te proporcionará todas las herramientas que necesitás para destacar entre la competencia ¡No pierdas más tiempo e #iniciate en el negocio inmobiliario con éxito!',
+		key: 0 + (new Date())
 	},
 	{
-		title: 'Lorem Ipsum'
+		title: 'Pack #Reinventate',
+		description: '¿Querés modernizar tu negocio inmobiliario y atraer más clientes? ¡Este pack es la solución perfecta! Con diseños innovadores y herramientas de marketing inmobiliario , te ayudará a actualizar la imagen de tu negocio y destacar entre la competencia. ¡Elegí #reinventate para hacer crecer tu negocio inmobiliario hoy mismo!',
+		key: 1 + (new Date())
 	},
 	{
-		title: 'Lorem Ipsum'
+		title: 'Pack #Desarrollos',
+		description: '¿Querés lanzar un desarrollo inmobiliario exitoso? ¡nosotros te ayudamos a hacerlo! Este pack tiene las herramientas necesarias para promocionar tu proyecto y atraer a más clientes. Con diseños creativos y estrategias de marketing, #desarrollos es la elección perfecta para cualquier proyecto inmobiliario y llevarlo al siguiente nivel.',
+		key: 2 + (new Date())
 	}
 
 ]
 
 
-export default function UsSection (){
+export default function UsSection ({Scroll}){
 
+	const ScrollReference = useRef()
+
+	const ScrollToBottom = ()=>{
+		return ScrollReference.current.scrollIntoView({ behavior: 'smooth' });
+	}
+
+	
+	useEffect(()=>{
+		if(Scroll === 'Info'){
+			ScrollToBottom();
+		}
+
+		return undefined
+	},[Scroll])
 
 	return (
-		<MainContainer>
+		<MainContainer ref={ScrollReference}>
 			<TopTitleContainer>
 				<h2>¿Quiénes Somos?</h2>
 			</TopTitleContainer>
@@ -53,9 +74,9 @@ export default function UsSection (){
 				<div className='FlexedRow'>
 					<p>
 						Somos conexión entre usuario y propiedad. Somos evolución, crecimiento, desarrollo.
-					</p>
-					<p className='Colored'>
-						Somos Lux.
+						<span className='Colored'>
+							Somos Lux.
+						</span>
 					</p>
 				</div>
 			</TopDescriptionContainer>
@@ -68,13 +89,14 @@ export default function UsSection (){
 			</BottomDescriptionContainer>
 			<PlanesContainer>
 				<CardsContainer>
-					{Mockup.map((el)=><InnerCard>
-						<h3>{el.title}</h3>
+					{Mockup.map((el)=><InnerCard key={el.key}>
+						<h2>{el.title}</h2>
+						<h5>{el.description}</h5>
 					</InnerCard>)}
 				</CardsContainer>
 
 				<button type='button'>
-					<Link><h2>Ver Más &gt;</h2></Link>
+					<Link to="/Planes"><h2>Ver Más &gt;</h2></Link>
 				</button>
 
 

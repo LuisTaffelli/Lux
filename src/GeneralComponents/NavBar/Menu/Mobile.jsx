@@ -1,73 +1,86 @@
-// import { GrClose } from 'react-icons/gr';
+import { useContext, useEffect, useState, useRef } from "react"
+import { useNavigate } from "react-router-dom";
+import { WebSocketContext } from '../../../FooterProvider/Index';
 
-// import Avatar from '../../Avatar/index';
+import { GrClose } from 'react-icons/gr';
+
+import Avatar from '../../Avatar/index';
 
 
-// import Searchbar from '../SearchbarStater';
 
+import Logo from '../Logo';
 
+import {
+  MobileMenu,
+  Container,
+  BottomLink,
+  MobileSearchbar,
+  MobileLink,
+  LinksContainer,
+  BottomContainer,
+  Decoration
+} from './MobileElements';
+import { LoginButton } from './PCElements';
 
-// import Logo from '../Logo';
+function Mobile({ searchbar, links, state, user, toggle, togglePop, SectionSetter }) {
 
-// import {
-//   MobileMenu,
-//   Container,
-//   BottomLink,
-//   MobileSearchbar,
-//   MobileLink,
-//   LinksContainer,
-//   BottomContainer,
-// } from './MobileElements';
-// import { LoginButton } from './PCElements';
+  const Locations = useNavigate()
 
-// function Mobile({ searchbar, links, state, user, toggle, togglePop }) {
-//   return (
-//     <>
-//       <MobileMenu show={state}>
-//         <Container>
-//           <button className="menu" onClick={toggle} type="button">
-//             <GrClose size={20} />
-//           </button>
+  const HandleAction = (anchorTo, link) => {
+    toggle();
 
-//           {/* Middle buttons */}
+    if(anchorTo === 'Contacto'){
+      SectionSetter(anchorTo);
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth',
+      });
+      return null
+    }
 
-//           {user?.name ? (
-//             <>
-//               <Avatar user={user} text="hola" lg toRight />
+    if(!link){
+      return null
+    }
 
-//               <LinksContainer>
-//                 {links?.map((link, i) => (
-//                   <MobileLink onClick={toggle} key={i} to={link.to}>
-//                     <span className="icon">{link.icon}</span> {link.label}
-//                   </MobileLink>
-//                 ))}
-//               </LinksContainer>
-//             </>
-//           ) : null}
+    SectionSetter(anchorTo);
+    Locations(link);
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+  };
 
-//           <BottomContainer alignCenter>
-//             {/* <BottomLink to="/mode">Cambiar a modo instructor</BottomLink> */}
-//             <BottomLink to="/help">Ayuda</BottomLink>
+  return (
+    <>
+      <button className="menu" onClick={toggle} type="button">
+        <div className="Icon" />
+      </button>
+      <MobileMenu show={state}>
+        <Decoration />
+        <Container>
+          {/* Middle buttons */}
+          <LinksContainer>
+            {links?.map(({ to, label, anchorTo }, i) => (
+              <MobileLink className="fs-1" 
+              to={to}
+              onClick={()=>HandleAction(anchorTo, to)}
+              key={i}>
+                {label}
+              </MobileLink>
+            ))}
+          </LinksContainer>
+            {/* <BottomLink to="/mode">Cambiar a modo instructor</BottomLink> */}
+        </Container>
+      </MobileMenu>
 
-//             {!user?.name ? (
-//               <LoginButton className="login-button" onClick={togglePop}>
-//                 Ingresar
-//               </LoginButton>
-//             ) : null}
+      {/* <MobileSearchbar>
+        {searchbar}
+        <div className="shop">
+          <img src="/images/Mobile/chart.png" alt="" />
+        </div>
+      </MobileSearchbar> */}
+    </>
+  );
+}
 
-//             <Logo className="logo-sm" theme="grey" alt="Meet your finance" />
-//           </BottomContainer>
-//         </Container>
-//       </MobileMenu>
-
-//       {/* <MobileSearchbar>
-//         {searchbar}
-//         <div className="shop">
-//           <img src="/images/Mobile/chart.png" alt="" />
-//         </div>
-//       </MobileSearchbar> */}
-//     </>
-//   );
-// }
-
-// export default Mobile;
+export default Mobile;

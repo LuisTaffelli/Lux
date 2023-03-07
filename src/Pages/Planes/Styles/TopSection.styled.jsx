@@ -64,9 +64,6 @@ export const MainContainer = styled.section`
 
 	color: var(--complement-dregrade3);
 
-	
-
-
 	.Bubbles{
 		position: absolute;
 		width: 12%;
@@ -89,6 +86,11 @@ export const MainContainer = styled.section`
 	.Description{
 		margin-top: 20px;
 		font-weight: 400;
+	}
+
+	@media screen and (${breakpoints.ipad}){
+		padding: 60px 18% 0 6%;
+		padding-top: 60px;
 	}
 `
 

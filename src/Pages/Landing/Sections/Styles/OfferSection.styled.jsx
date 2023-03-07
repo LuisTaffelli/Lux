@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import {breakpoints} from '../../../../Utils/breakpoints'
 
 
 
@@ -173,12 +173,18 @@ export const CardsContainer = styled.div`
 	
 	width: 80%;
 
-	margin: 40px 0 0 12%;
+	margin: 40px 0 40px 8%;
 
 	display: flex;
 
 	justify-content: space-around;
 
+	flex-wrap: wrap;
+
+	@media screen and (${breakpoints.pc}){
+		flex-wrap: no-wrap;
+		margin: 40px 0 0 12%;
+	}
 
 	
 
@@ -194,14 +200,23 @@ export const InnerCard = styled.div`
 
 	align-items: center;
 
-	box-shadow: 0 0.5rem 2rem #0000008f;
+	box-shadow: -10px 3px 1rem 0px rgba(230, 25, 82, .5);
 
 	border-radius: 24px;
 
+	margin: 8px;
+
 	height: 500px;
 
-	width: 20%;
+	width: 42%;
 
+	@media screen and (${breakpoints.mobile}){
+		width: 80%;
+	}
+
+	@media screen and (${breakpoints.pc}){
+		width: 20%;
+	}
 
 
 	&>img{
@@ -214,14 +229,46 @@ export const InnerCard = styled.div`
 		width: 56%;	
 	}
 
+	&>p{
+		min-height: 120px;
+
+		@media screen and (${breakpoints.pcFullRes}){
+			min-height: 80px;
+		}
+	}
+
 	&>p, h5{
-		width: 80%;
+		width: 90%;
 		text-align: center;
 		margin: 8px 0;
+
+
+		@media screen and (${breakpoints.mobile}){
+			text-align: left;
+			width: 80%;
+		}
+	}
+
+	&>h5{
+		width: 80%;
+		text-align: left;
+		font-weight: 700;
+		font-size: calc(0.525rem + .6vw);
+
+		@media screen and (${breakpoints.mobile}){
+			font-size: calc(0.725rem + .9vw);
+		}
+
+
+		@media screen and (${breakpoints.pc}){
+			font-size: calc(0.425rem + .6vw);
+		}
 	}
 
 	&>h3{
 		margin-top: 20px;
+		min-height: 66px;
+		text-align: center;
 		color: var(--primary);
 	}
 

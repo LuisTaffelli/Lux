@@ -7,15 +7,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
-
+import WhatsappIcon from '../../../Images/wsp_boton.svg';
+import WhatsappIconHover from '../../../Images/wsp_boton_oscuro.svg';
 
 export const MainContainer = styled.section`
-
+	${props=> console.log(props)}
 	position: relative;
-	background-color: #FFF;
+	background-color: ${({Status})=> Status === 'Colored' ? '#E2E2E2' : '#FFF'};
 	min-height: 400px;
 
-	padding: 0 6% 20px 8%;
+	padding: 0 8% 20px 8%;
 
 
 
@@ -38,18 +39,28 @@ export const MainContainer = styled.section`
 	.Luxed{
 		color: var(--primary);
 	}
+
+	@media screen and (${breakpoints.ipad}){
+		height: max-content;
+	}
+
+	@media screen and (${breakpoints.pcFullRes}){
+		padding-top: 200px;
+	}
+
 `
 
 export const MainWrapper = styled.div`
 
 	display: grid;
 
-	justify-items: center;
+	grid-template-columns: 50% 50%;
+
+	justify-items: ${props=>props.position === 'Right' ? 'flex-start' : 'flex-end'};
     align-items: center;
 
-	margin-top: 72px;
-
 	margin-bottom: 20px;
+
 	.ExtrasContainer{
 		display: flex;
 		flex-direction: column;
@@ -64,7 +75,10 @@ export const MainWrapper = styled.div`
 	}
 
 	.Title{
-		font-weight: 700;
+		font-weight: 500;
+		&>.Luxed{
+			font-weight: 600 !important;
+		}
 	}
 	.SubTitle{
 		font-weight: 600;
@@ -79,12 +93,18 @@ export const MainWrapper = styled.div`
 
 
 	.MediaButtons{
-		margin: 8px 0;
+		margin: ${props=>props.position === 'Right' ? 
+			'8px 0 8px auto' 
+			
+			:
+			
+			'8px auto 8px 0'
+		};
 		display: flex;
 		align-items: center;
+		grid-column: 1 / 3;
 
 		.WhatsappButton{
-			background-color: #000;
 			border-radius: 99999px;
 			width: 40px;
 			height: 40px;
@@ -97,6 +117,12 @@ export const MainWrapper = styled.div`
 		.WhatsappIcon{
 			width: 28px;
 			height: 28px;
+			background: url(${WhatsappIcon});
+			transition: background ease-in .3s;
+
+			&:hover{
+				background: url(${WhatsappIconHover});
+			}
 		}
 	}
 
@@ -106,6 +132,7 @@ export const MainWrapper = styled.div`
 		justify-content: center;
 		width: 400px;
 		height: 220px;
+		max-width: 100%;
 		background-color: var(--primary);
 		border-radius: 12px;
 
@@ -124,7 +151,35 @@ export const MainWrapper = styled.div`
 		width: 120px;
 		height: 40px;
 		border-radius: 80px;
-		background: linear-gradient(to right, var(--complement-dregrade2), var(--complement-dregrade3));
+		background: linear-gradient(to right, var(--primary-dark1), var(--primary));
+		color: #FFF;
+
+		&:hover{
+			background: var(--complement-dregrade3);
+			color: var(--dark);
+		}
+	}
+
+	@media screen and (${breakpoints.ipad}){
+		.ColorBox{
+			width: 100%;
+			height: 240px
+		}
+		.MediaButtons{
+			margin-left: 28px;
+		}
+	}
+
+	@media screen and (${breakpoints.pcFullRes}){
+		display: flex;
+		flex-wrap: wrap;
+		flex: 0 1 49%;
+		align-items: unset;
+
+		justify-content: unset;
+		.ColorBox{
+			margin: auto;
+		}
 	}
 
 
@@ -134,6 +189,8 @@ export const MainWrapper = styled.div`
 export const LeftContainer = styled.div`
 	
 	margin: 0 12px;
+
+	max-width: 100%;
 
 	.PackInfoPersonalizado{
 		display: flex;
@@ -152,7 +209,7 @@ export const LeftContainer = styled.div`
 
 	.CustomCheckbox{
   		position: relative;
-  		display: inline-block;
+  		display: flex;
   		padding: 0 6px;
   		margin: 10px 0;
 
@@ -193,17 +250,106 @@ export const LeftContainer = styled.div`
 
 	}
 
+	@media screen and (${breakpoints.ipad}){
+		width: 94%;
+		grid-column: 1 / 3;
+		grid-row: ${props=>props.position === "Right" ? 
+			'2' : '1'
+		};
+	}
+
+	@media screen and (${breakpoints.pcFullRes}){
+		max-width: 47%;
+		width: 50%;
+
+		.ColorBox{
+			margin: 0 0 0 10% !important;
+		}
+	}
+
 `
 
 export const RightContainer = styled.div`
-	margin: 0 12px;
 
-	grid-column: 2;
+	max-width: 100%;
+	margin: 0 12px;
 
 	text-align: right;
 
 	.MediaButtons{
 		justify-content: flex-end;
+	}
+
+	.PackInfoPersonalizado{
+		display: flex;
+	}
+
+	.PersonalizadoLeft{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.PersonalizadoRight{
+		display: flex;
+		flex-direction: column;
+		margin-left: 12px;
+	}
+
+	.CustomCheckbox{
+  		position: relative;
+  		display: flex;
+  		padding: 0 6px;
+  		margin: 10px 0;
+
+  		&>input{
+  			border: transparent;
+  			outline: transparent;
+  			margin-right: 8px;
+  			appearance: none;
+  		}
+
+		&>input:after {
+        	width: 15px;
+        	height: 15px;
+        	border-radius: 15px;
+        	top: 0px;
+        	left: 0px;
+        	position: relative;
+        	background-color: #FFF;
+        	content: '';
+        	display: inline-block;
+        	visibility: visible;
+        	border: 2px solid var(--primary);
+    	}
+
+    	&>input:checked:after {
+    	    width: 15px;
+    	    height: 15px;
+    	    border-radius: 15px;
+    	    top: 0px;
+    	    left: 0px;
+    	    position: relative;
+    	    background-color: var(--primary);
+    	    content: '';
+    	    display: inline-block;
+    	    visibility: visible;
+    	    border: 2px solid var(--primary);
+    	}
+
+	}
+
+	@media screen and (${breakpoints.ipad}){
+		width: 94%;
+		grid-column: 1 / 3;
+	}
+
+	@media screen and (${breakpoints.pcFullRes}){
+		max-width: 49%;
+		width: 50%;
+
+		.ColorBox{
+			margin: 0 auto;
+		}
 	}
 `
 

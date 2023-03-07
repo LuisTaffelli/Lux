@@ -9,7 +9,9 @@ import {
 	RowContainer,
 	PlanesBoton,
 	MirrorColumn, 
-	InnerTitle
+	InnerTitle,
+	StyledLink,
+	CenteredColumn,
 } from './Styles/TopSection.styled'
 
 
@@ -18,7 +20,7 @@ import {
 import Bubbles from '../../../Images/ESFERAS.png'
 
 import BackgroundWhite from '../../../Images/TopBackground.svg'
-import Mirror from '../../../Images/VIDRIO.png'
+import Mirror from '../../../Images/Vidrio_4.png'
 import BotonVidrio1 from '../../../Images/Boton_1.png'
 import BotonVidrio2 from '../../../Images/Boton_2.png'
 import Logo2 from '../../../Images/LOGO_2.svg'
@@ -36,8 +38,8 @@ export default function TopSection (){
 			<RowContainer>
 				<InnerTitle>
 					<h3>Somos un estudio de -Marketing-</h3>
-					<p>Especializados y exclusivos</p>
-					<p>para el rubro inmobiliario</p>
+					<p className="fs-4">Especializados y exclusivos</p>
+					<p className="fs-4">para el rubro inmobiliario</p>
 				</InnerTitle>
 
 
@@ -50,7 +52,7 @@ export default function TopSection (){
 			<img src={BackgroundWhite} className='RightBottomCorner' />
 
 			<Row className="p-5 my-5">
-				<Col className="py-5 my-5">
+				<CenteredColumn className="py-5 my-5">
 					<Row>
 						<Col>
 							<h3 className="text-light">
@@ -64,18 +66,8 @@ export default function TopSection (){
 						</Col>
 					</Row>
 					<Row>
-						<Col className="position-relative">
-							<MirrorColumn status={MirrorStatus}>
-							{	MirrorStatus ? 
-								<img className="w-100" fluid src={BotonVidrio2} />
-								
-								:
-
-								<img className="w-100" fluid src={BotonVidrio1} />
-
-							}
-							</MirrorColumn>
-							<Link to='/Planes' className="text-light">
+						<MirrorColumn status={MirrorStatus}>
+							<StyledLink to='/Planes' className="text-light">
 								<PlanesBoton type="button" onClick={()=>setMirrorStatus(
 									(old)=>!old
 									)}>
@@ -83,10 +75,10 @@ export default function TopSection (){
 										VER PLANES
 									</h2>
 								</PlanesBoton>
-							</Link>
-						</Col>
+							</StyledLink>
+						</MirrorColumn>
 					</Row>
-				</Col>
+				</CenteredColumn>
 			</Row>
 
 		</MainContainer>

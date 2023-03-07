@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import {breakpoints} from '../../../../Utils/breakpoints'
 import Background from '../../../../Images/Fondo_Color_1____2.png'
 
 
@@ -57,7 +57,7 @@ export const TopTitleContainer = styled.div`
 		position: absolute;
 		height: 3px;
 		left: 0;
-		bottom: -26px;
+		bottom: 0;
 		width: 36%;
 		background-color: #FFF;
 	}
@@ -114,7 +114,7 @@ export const BottomTitleContainer = styled.div`
 		position: absolute;
 		height: 3px;
 		right: 0;
-		bottom: -26px;
+		bottom: 0;
 		width: 20%;
 		background-color: var(--primary);
 	}
@@ -168,11 +168,18 @@ export const InnerCard = styled.div`
 
 	align-items: center;
 
-	width: 30%;
+	width: 45%;
 
 	color: #FFF;
 	
+	@media screen and (${breakpoints.mobile}){
+		width: 80%;
+		display: ${props=> props.CardNumber > 1 ? 'none' : 'flex'};
+	}
 
+	@media screen and (${breakpoints.pc}){
+		width: 30%;
+	}
 	
 
 	.card{
