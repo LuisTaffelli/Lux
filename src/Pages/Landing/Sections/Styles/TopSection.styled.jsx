@@ -229,6 +229,24 @@ export const RowContainer = styled(Row)`
     	top: 0;
     	transform: translateX(-8%) translateY(-2%);
     	z-index: 2;
+    	@media screen and (${breakpoints.ipad}){
+    		display: none;
+    	}
+	}
+
+	.BlurTLMobile{
+		display: none;
+		@media screen and (${breakpoints.ipad}){
+			display: inherit;
+			position: absolute;
+			max-width: none;
+    		width: 120%;
+    		height: 120%;
+    		left: 0;
+    		top: 0;
+    		transform: translateX(-8%) translateY(-2%);
+    		z-index: 2;
+		}		
 	}
 
 	.BlurInner{
@@ -284,7 +302,7 @@ export const InnerTitle = styled(Col)`
 	@media screen and (${breakpoints.mobile}){
 		&>h3{
 			width: 60%;
-			font-size: calc(0.6rem + 0.9vw);
+			font-size: calc(1rem + 0.9vw);
 		}
 		&>p{
 			font-size: 1.2rem;
