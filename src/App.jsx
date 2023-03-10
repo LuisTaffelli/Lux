@@ -9,7 +9,7 @@ import Landing from './Pages/Landing/Landing';
 import ComingSoon from './Pages/ComingSoon/';
 import Footer from './GeneralComponents/Footer/';
 import TopFooter from './GeneralComponents/FooterTop/SMFooter'
-import Planes from './Pages/offers';
+import Planes from './Pages/Planes';
 
 function App() {
 
@@ -38,7 +38,7 @@ function App() {
           
           <Route element={<Landing ScrollTo={Section}/>} exact path="/"/>
 
-          {/*<Route element={<Planes />} exact path="/Planes"/>*/}
+          <Route element={<Planes />} exact path="/Planes"/>
 
           <Route element={<Navigate to="/" />} path="*" />
         </Routes>

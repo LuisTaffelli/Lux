@@ -6,7 +6,7 @@ import {
 	PlanPersonalizado
 } from './Components';
 
-import PlanesInfo from './PacksContent.json';
+import PlanesInfo from './MockUps/PacksContent.json';
 
 
 
