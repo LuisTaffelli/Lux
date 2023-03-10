@@ -17,7 +17,7 @@ export const MobileMenu = styled.div`
   transform: translate(-100%, 0);
   min-width: max-content;
   width: 100%;
-  height: 100vh;
+  height: -webkit-fill-available;
   background: linear-gradient(180deg, rgba(7,7,7, .9), var(--secondary-dark));
   box-shadow: 0 0 1rem #0004;
 

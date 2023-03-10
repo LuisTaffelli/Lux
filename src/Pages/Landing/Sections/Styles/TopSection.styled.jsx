@@ -15,7 +15,7 @@ export const MirrorColumn = styled(Col)`
 	
 	max-width: 320px;
 
-	box-shadow: inset 1px 1px 14px 0px rgba(240,240,240,1);
+	box-shadow: inset 4px 1px 20px 0px rgba(240,240,240,1);
 
 	backdrop-filter: blur(150px);
 
@@ -308,7 +308,7 @@ export const InnerTitle = styled(Col)`
 
 	color: #FFF;
 
-	box-shadow: inset 1px 1px 14px 0px rgba(240,240,240,1);
+	box-shadow: inset 4px 1px 20px 0px rgba(240,240,240,1);
 
 	border-radius: 14px;
 

@@ -229,7 +229,7 @@ export const InnerCard = styled.div`
 
 	border-radius: 32px;
 
-	height: 600px;
+	height: 460px;
 
 	width: 90%;
 
@@ -253,7 +253,7 @@ export const InnerCard = styled.div`
 		margin-top: 20px;
 		color: var(--primary);
 		font-weight: 600;
-		font-family: 'Poppins';
+		font-family: Montserrat;
 		@media screen and (${breakpoints.pc}){
 			font-size: calc(1.125rem + 0.9vw);
 			text-align: center;
@@ -269,6 +269,7 @@ export const InnerCard = styled.div`
 		margin: 40px 0;
 		font-size: 14px;
 		text-align: left;
+		font-family: Poppins;
 		@media screen and (${breakpoints.ipad}){
 			font-size: 18px;
 		}
