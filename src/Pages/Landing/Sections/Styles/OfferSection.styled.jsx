@@ -62,7 +62,7 @@ export const TopTitleContainer = styled.div`
 
 	position: relative;
 
-	margin: 60px 0 0 6%;
+	margin: 60px 0 0 8%;
 
 	width: 80%;
 
@@ -103,7 +103,7 @@ export const TopDescriptionContainer = styled.div`
 
 	text-align: left;
 
-	margin: 40px 0 0 6%;
+	margin: 40px 0 0 4%;
 
 	font-size: 1.2rem;
 
@@ -174,7 +174,7 @@ export const CardsContainer = styled.div`
 	
 	width: 80%;
 
-	margin: 40px 0 40px 8%;
+	margin: 40px auto 40px;
 
 	display: flex;
 
@@ -184,7 +184,7 @@ export const CardsContainer = styled.div`
 
 	@media screen and (${breakpoints.pc}){
 		flex-wrap: no-wrap;
-		margin: 40px 0 0 12%;
+		margin: 40px auto 0;
 	}
 
 	
@@ -205,7 +205,7 @@ export const InnerCard = styled.div`
 
 	border-radius: 24px;
 
-	margin: 8px;
+	margin: 8px auto;
 
 	height: 500px;
 

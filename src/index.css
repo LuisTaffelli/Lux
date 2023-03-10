@@ -16,6 +16,8 @@
 
 
   --primary: #E61952;
+  --primary-transparent: rgba(230, 25, 82, .3);
+  --primary-dark-transparent:rgba(86, 11, 38, .7);
   --primary-dark1:#560B26;
   --secondary: #111223;
   --secondary-dark: #232A31;

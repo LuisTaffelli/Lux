@@ -191,7 +191,7 @@ export const MainWrapper = styled.div`
 
 export const LeftContainer = styled.div`
 	
-	margin: 0 12px;
+	margin: auto;
 
 	max-width: 100%;
 
@@ -276,7 +276,7 @@ export const LeftContainer = styled.div`
 export const RightContainer = styled.div`
 
 	max-width: 100%;
-	margin: 0 12px;
+	margin: auto;
 
 	text-align: right;
 

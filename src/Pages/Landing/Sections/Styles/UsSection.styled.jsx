@@ -19,7 +19,7 @@ export const PlanesContainer = styled.div`
 	&>button{
 		color: var(--primary);
 		width: 80%;
-    	margin: 40px 0 40px 6%;
+    	margin: 40px auto 40px;
 	}
 
 	& a:hover{
@@ -86,7 +86,7 @@ export const TopTitleContainer = styled.div`
 
 	position: relative;
 
-	margin: 60px 0 0 6%;
+	margin: 80px auto 0 9%;
 
 	width: 55%;
 
@@ -124,7 +124,7 @@ export const TopDescriptionContainer = styled.div`
 
 	text-align: left;
 
-	margin: 40px 0 0 6%;
+	margin: 40px auto 0 9%;
 
 	font-size: 1.2rem;
 
@@ -147,7 +147,7 @@ export const BottomTitleContainer = styled.div`
 	
 	position: relative;
 
-	margin: 60px 6% 0 0;
+	margin: 60px 0 0 6%;
 
 	width: 80%;
 
@@ -188,7 +188,7 @@ export const BottomDescriptionContainer = styled.div`
 
 	text-align: right;
 
-	margin: 40px 6% 0 0;
+	margin: 40px 0 0 6%;
 
 	font-size: 1.2rem;
 
@@ -201,7 +201,7 @@ export const CardsContainer = styled.div`
 	
 	width: 80%;
 
-	margin: 40px 0 0 6%;
+	margin: 40px auto 0;
 
 	display: flex;
 
