@@ -20,7 +20,7 @@ import {
 import Bubbles from '../../../Images/ESFERAS.png';
 
 import BackgroundWhite from '../../../Images/TopBackground.svg';
-// import Mirror from '../../../Images/Vidrio_5.png';
+import Mirror from './Styles/vidrioDesktop.png';
 import MirrorMobile from '../../../Images/Vidrio_4.png';
 import BotonVidrio1 from '../../../Images/Boton_1.png';
 import BotonVidrio2 from '../../../Images/Boton_2.png';
@@ -44,7 +44,7 @@ export default function TopSection (){
 				</InnerTitle>
 
 
-				{/*<img src={Mirror} className='BlurTL'/>*/}
+				<img src={Mirror} className='BlurTL'/>
 				<img src={MirrorMobile} className='BlurTLMobile'/>
 				<img className='Bubbles' src={Bubbles}/>
 			</RowContainer>
