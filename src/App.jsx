@@ -9,7 +9,7 @@ import Landing from './Pages/Landing/Landing';
 import ComingSoon from './Pages/ComingSoon/';
 import Footer from './GeneralComponents/Footer/';
 import TopFooter from './GeneralComponents/FooterTop/SMFooter'
-import Planes from './Pages/Planes/index';
+import Planes from './Pages/Planes/Index';
 
 function App() {
 
