@@ -6,9 +6,9 @@ import './App.scss';
 import './App.css';
 import Navbar from './GeneralComponents/NavBar/index';
 import Landing from './Pages/Landing/Landing';
-import Planes from './Pages/Planes/index';
-import ComingSoon from './Pages/ComingSoon/index';
-import Footer from './GeneralComponents/Footer/index';
+import Planes from './Pages/Planes/';
+import ComingSoon from './Pages/ComingSoon/';
+import Footer from './GeneralComponents/Footer/';
 import TopFooter from './GeneralComponents/FooterTop/SMFooter'
 
 function App() {
