@@ -39,7 +39,7 @@ export default function TopSection (){
 			<RowContainer>
 				<CenteredColumn className="py-5 my-5">
 					<InnerTitle>
-						<h3>Somos un estudio de -Marketing-</h3>
+						<h3>Somos un estudio de <span>-Marketing-</span></h3>
 						<p className="fs-4">Especializados y exclusivos</p>
 						<p className="fs-4">para el rubro inmobiliario</p>
 					</InnerTitle>
