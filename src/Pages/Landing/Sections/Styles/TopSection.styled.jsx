@@ -33,7 +33,7 @@ export const MirrorColumn = styled(Col)`
 		position: absolute;
 		top:0;
 		left:0;
-		box-shadow: 1px 1px 14px 0px rgba(0,0,0,.6);
+		box-shadow: 1px 1px 14px 0px rgba(0,0,0,.3);
 		border-radius: 4px;
 	}
 
@@ -323,7 +323,7 @@ export const InnerTitle = styled(Col)`
 		position: absolute;
 		top:0;
 		left:0;
-		box-shadow: 1px 1px 14px 0px rgba(0,0,0,.6);
+		box-shadow: 1px 1px 14px 0px rgba(0,0,0,.3);
 		border-radius: 14px;
 	}
 
