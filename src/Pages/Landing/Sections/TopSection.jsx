@@ -12,20 +12,20 @@ import {
 	InnerTitle,
 	StyledLink,
 	CenteredColumn,
-} from './Styles/TopSection.styled'
+} from './Styles/TopSection.styled';
 
 
 
 
-import Bubbles from '../../../Images/ESFERAS.png'
+import Bubbles from '../../../Images/ESFERAS.png';
 
-import BackgroundWhite from '../../../Images/TopBackground.svg'
-import Mirror from '../../../Images/Vidrio_5.png'
-import MirrorMobile from '../../../Images/Vidrio_4.png'
-import BotonVidrio1 from '../../../Images/Boton_1.png'
-import BotonVidrio2 from '../../../Images/Boton_2.png'
-import Logo2 from '../../../Images/LOGO_2.svg'
-import Decoration from '../../../Images/Decoracion_5.svg'
+import BackgroundWhite from '../../../Images/TopBackground.svg';
+import Mirror from '../../../Images/Vidrio_5.png';
+import MirrorMobile from '../../../Images/Vidrio_4.png';
+import BotonVidrio1 from '../../../Images/Boton_1.png';
+import BotonVidrio2 from '../../../Images/Boton_2.png';
+import Logo2 from '../../../Images/LOGO_2.svg';
+import Decoration from '../../../Images/Decoracion_5.svg';
 
 
 
