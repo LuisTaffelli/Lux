@@ -119,10 +119,12 @@ export const LinksContainer = styled.ul`
 export const Decoration = styled.div`
   position: absolute;
   width: 100%;
-  height: 65%;
+  height: 100%;
   z-index: 1000;
   top: 0px;
   background: url(${Background_Menu_Mobile}) no-repeat;
+  background-position: 0px 350%;
+  background-size: 100% 109%;
   // background: linear-gradient(315deg, var(--primary), var(--primary-dark1));
 
 `
