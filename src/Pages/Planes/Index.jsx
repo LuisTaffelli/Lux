@@ -1,4 +1,3 @@
-
 import {
 	TopSection,
 	GeneralPlan,
@@ -32,5 +31,5 @@ export default function Planes (){
 			<PlanPersonalizado />
 		</>
 
-	)
-}
+	);
+};
