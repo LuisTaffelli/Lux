@@ -15,18 +15,15 @@ export const MirrorColumn = styled(Col)`
 	
 	max-width: 320px;
 
-	background: url(${BotonVidrio2});
+	box-shadow: inset 1px 1px 14px 0px rgba(240,240,240,1);
 
-	background-repeat: no-repeat;
+	backdrop-filter: blur(10px);
 
-	background-size: 100% 120px;
 
-	background-position: 8px;
+	border-radius: 4px;
 
 	@media screen and (${breakpoints.pc}){
 		max-width: 336px;
-		background-size: 100% 120px;
-		background-position: -16px;
 	}
 
 	@media screen and (${breakpoints.pcFullRes}){
@@ -35,7 +32,6 @@ export const MirrorColumn = styled(Col)`
 	}
 
 	@media screen and (${breakpoints.mobile}){
-		background-position: -4px;
 	}
 
 
@@ -73,7 +69,8 @@ export const PlanesBoton = styled(Button)`
 
 `
 export const StyledLink = styled(Link)`
-
+	
+	
 	
 `
 
@@ -97,14 +94,14 @@ export const MainContainer = styled(Container)`
 
 	@keyframes ArrAbaPelotasMobile {
 		0% {top: 10%}
-		100% {top:74%}
+		100% {top:64%}
 	}
 
 
 	.Bubbles{
 		position: absolute;
 		width: 30%;
-    	left: 88%;
+    	left: 85%;
     	top: 15%;
 		transform: scaleX(-1);
 		animation-name: ArrAbaPelotas;
@@ -285,6 +282,10 @@ export const InnerTitle = styled(Col)`
 	z-index: 3;
 
 	color: #FFF;
+
+	box-shadow: inset 1px 1px 14px 0px rgba(240,240,240,1);
+
+	border-radius: 14px;
 
 	font-size: 1.8rem;
 

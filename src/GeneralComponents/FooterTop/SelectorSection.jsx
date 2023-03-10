@@ -66,6 +66,8 @@ export default function BottomSection (){
 		return undefined;
 	},[ws])
 
+	console.log(defaultSelectedValue)
+
 	const HandleChange = (Selected)=>{
 
 		setDefaultSelectedValue(Selected)
@@ -113,10 +115,12 @@ export default function BottomSection (){
 				<TopInput>
 					<p>¿En que te podemos ayudar?</p>
 					
-					<Select defaultValue={defaultSelectedValue}
+					<Select
 					styles={StylesSelect} 
 					options={Options}
+					value={defaultSelectedValue}
 					onChange={HandleChange}
+					defaultValue={defaultSelectedValue}
   					placeholder='Selecciona un plan'/>
 				</TopInput>
 				<EmailInput>

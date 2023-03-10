@@ -37,16 +37,15 @@ export default function TopSection (){
 	return (
 		<MainContainer fluid className="w-100 h-100">
 			<RowContainer>
-				<InnerTitle>
-					<h3>Somos un estudio de -Marketing-</h3>
-					<p className="fs-4">Especializados y exclusivos</p>
-					<p className="fs-4">para el rubro inmobiliario</p>
-				</InnerTitle>
-
-
-				<img src={Mirror} className='BlurTL'/>
-				<img src={MirrorMobile} className='BlurTLMobile'/>
-				<img className='Bubbles' src={Bubbles}/>
+				<CenteredColumn className="py-5 my-5">
+					<InnerTitle>
+						<h3>Somos un estudio de -Marketing-</h3>
+						<p className="fs-4">Especializados y exclusivos</p>
+						<p className="fs-4">para el rubro inmobiliario</p>
+					</InnerTitle>
+	
+					<img className='Bubbles' src={Bubbles}/>
+				</CenteredColumn>
 			</RowContainer>
 
 			<img src={Decoration} className='Arrows' />

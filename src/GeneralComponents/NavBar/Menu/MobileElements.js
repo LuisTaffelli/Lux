@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { breakpoints } from '../../../Utils/breakpoints';
+import Background_Menu_Mobile from '../Images/Background_Menu_Mobile.svg'
 
 
 
@@ -51,7 +52,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   flex-flow: column;
-  padding: 7rem 1rem;
+  padding: 4rem 1rem;
 
   .menu {
     display: block;
@@ -69,7 +70,7 @@ export const MobileLink = styled(Link)`
 
   gap: 0.75rem;
 
-  margin: 0.75rem 0;
+  margin: 0.15rem 0;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 700;
@@ -88,11 +89,20 @@ export const MobileLink = styled(Link)`
   }
 
   :hover {
-    color: #7fa646;
+    color: #2b2b2b;
+    background-color: rgba(255,255,255, .5);
+    border-radius: 9999px;
   }
+
+  :hover :active {
+    color: #2b2b2b;
+    background-color: rgba(255,255,255, .5);
+    border-radius: 9999px;
+  }
+
   :hover .icon {
     background: #000;
-    color: #7fa646;
+    color: #2b2b2b;
   }
 `;
 
@@ -103,7 +113,7 @@ export const LinksContainer = styled.ul`
   align-items: center;
 
   z-index: 1002;
-  padding: 0;
+  padding: 0 0 20px 0;
 `;
 
 export const Decoration = styled.div`
@@ -112,10 +122,8 @@ export const Decoration = styled.div`
   height: 65%;
   z-index: 1000;
   top: 0px;
-  background: linear-gradient(315deg, var(--primary), var(--primary-dark1));
-
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  background: url(${Background_Menu_Mobile}) no-repeat;
+  // background: linear-gradient(315deg, var(--primary), var(--primary-dark1));
 
 `
 
