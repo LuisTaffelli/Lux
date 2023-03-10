@@ -26,6 +26,17 @@ export const MirrorColumn = styled(Col)`
 
 	border-radius: 4px;
 
+	:after{
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		left:0;
+		box-shadow: 1px 1px 14px 0px rgba(0,0,0,.6);
+		border-radius: 4px;
+	}
+
 	@media screen and (${breakpoints.pc}){
 		max-width: 336px;
 	}
@@ -194,6 +205,7 @@ export const CenteredColumn = styled(Col)`
 
 	flex-direction: column;
 
+
 	@media screen and (${breakpoints.ipad}){
 
 		align-items: center;
@@ -303,6 +315,17 @@ export const InnerTitle = styled(Col)`
 	font-size: 1.8rem;
 
 	text-align: center;
+
+	:after{
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		left:0;
+		box-shadow: 1px 1px 14px 0px rgba(0,0,0,.6);
+		border-radius: 14px;
+	}
 
 	&>h3{
 		margin: 20px 0;
