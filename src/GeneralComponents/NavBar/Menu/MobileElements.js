@@ -52,7 +52,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   flex-flow: column;
-  padding: 4rem 1rem;
+  padding: 6rem 1rem;
 
   .menu {
     display: block;
