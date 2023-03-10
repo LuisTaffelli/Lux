@@ -44,7 +44,7 @@ export default function TopSection (){
 				</InnerTitle>
 
 
-				<img src={Mirror} className='BlurTL'/>
+				{/*<img src={Mirror} className='BlurTL'/>*/}
 				<img src={MirrorMobile} className='BlurTLMobile'/>
 				<img className='Bubbles' src={Bubbles}/>
 			</RowContainer>
