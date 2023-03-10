@@ -17,7 +17,11 @@ export const MirrorColumn = styled(Col)`
 
 	box-shadow: inset 1px 1px 14px 0px rgba(240,240,240,1);
 
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(150px);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 
 	border-radius: 4px;
@@ -43,15 +47,17 @@ export const PlanesBoton = styled(Button)`
 
 	z-index: 3;
 
+	text-align: center;
+
 	background-color: transparent;
 	border: none;
 
-	margin-left: 6%;
 	margin-top: 8px;
 		
 	&>h2{
 		font-size: calc(1.425rem + 0.9vw);
 		width: max-content;
+		margin: 0 auto;
 	}
 
 	&:hover{
@@ -88,8 +94,8 @@ export const MainContainer = styled(Container)`
 
 
 	@keyframes ArrAbaPelotas {
-		0% {top: 0%}
-		100% {top:38%}
+		0% {top: 8%}
+		100% {top: 24%}
 	}
 
 	@keyframes ArrAbaPelotasMobile {
@@ -101,7 +107,7 @@ export const MainContainer = styled(Container)`
 	.Bubbles{
 		position: absolute;
 		width: 30%;
-    	left: 85%;
+    	left: 86%;
     	top: 15%;
 		transform: scaleX(-1);
 		animation-name: ArrAbaPelotas;
@@ -109,9 +115,14 @@ export const MainContainer = styled(Container)`
 		animation-iteration-count: infinite;
 		animation-direction: alternate;
 
-		@media screen and (${breakpoints.ipad}){
-			animation-name: ArrAbaPelotasMobile;
+		@media screen and (${breakpoints.pc}){
+			animation-name: ArrAbaPelotas;
 		}
+
+
+		// @media screen and (${breakpoints.ipad}){
+		// 	animation-name: ArrAbaPelotasMobile;
+		// }
 
 	}
 
@@ -278,6 +289,8 @@ export const RowContainer = styled(Row)`
 
 
 export const InnerTitle = styled(Col)`
+
+	position: relative;
 
 	z-index: 3;
 

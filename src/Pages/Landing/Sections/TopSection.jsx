@@ -43,8 +43,8 @@ export default function TopSection (){
 						<p className="fs-4">Especializados y exclusivos</p>
 						<p className="fs-4">para el rubro inmobiliario</p>
 					</InnerTitle>
-	
 					<img className='Bubbles' src={Bubbles}/>
+	
 				</CenteredColumn>
 			</RowContainer>
 
