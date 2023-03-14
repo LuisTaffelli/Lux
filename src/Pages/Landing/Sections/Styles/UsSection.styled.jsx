@@ -239,7 +239,7 @@ export const InnerCard = styled.div`
 
 	margin: 12px 0;
 
-	transition: transform ease-in 0.6s;
+	transition: transform ease-in 0.25s;
 
 
 	&:hover{
@@ -274,14 +274,19 @@ export const InnerCard = styled.div`
 		font-size: 14px;
 		text-align: left;
 		font-family: Poppins;
+		font-weight: 300;
+		line-height: 1.4;
 		@media screen and (${breakpoints.ipad}){
-			font-size: 18px;
+			font-size: 16px;
 		}
 		@media screen and (${breakpoints.mobile}){
 			font-size: 16px;
 		}
+		@media screen and (${breakpoints.pc}){
+			font-size: calc(0.175rem + 0.8vw);
+		}
 		@media screen and (${breakpoints.pcFullRes}){
-			font-size: calc(0.125rem + 0.9vw);
+			font-size: calc(0.125rem + 0.8vw);
 		}
 	}
 
