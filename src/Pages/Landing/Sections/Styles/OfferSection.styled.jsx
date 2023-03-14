@@ -207,6 +207,8 @@ export const InnerCard = styled.div`
 
 	margin: 8px auto;
 
+	margin-left: 3.2%;
+
 	height: 500px;
 
 	width: 42%;
@@ -214,6 +216,8 @@ export const InnerCard = styled.div`
 	@media screen and (${breakpoints.mobile}){
 		width: 80%;
 	}
+
+
 
 	@media screen and (${breakpoints.pc}){
 		width: 20%;
@@ -239,8 +243,8 @@ export const InnerCard = styled.div`
 	}
 
 	&>p, h5{
-		width: 90%;
-		text-align: center;
+		width: 80%;
+		text-align: left;
 		margin: 8px 0;
 
 		font-family: 'Poppins';
@@ -262,6 +266,9 @@ export const InnerCard = styled.div`
 			font-size: calc(0.725rem + .9vw);
 		}
 
+		@media screen and (${breakpoints.ipad}){
+			font-size: calc(0.625rem + .9vw);
+		}
 
 		@media screen and (${breakpoints.pc}){
 			font-size: calc(0.325rem + .6vw);
@@ -276,5 +283,15 @@ export const InnerCard = styled.div`
 	}
 
 
+	@media screen and (${breakpoints.ipad}){
+		width: 80%;
 
+		&>.CM{
+			width: 30%;
+		}
+
+		&>img{
+			width: 20%;
+		}
+	}
 `

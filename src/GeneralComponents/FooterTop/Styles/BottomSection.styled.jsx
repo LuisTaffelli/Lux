@@ -37,7 +37,7 @@ export const TextContainer = styled.div`
 
 	flex-direction: column;
 
-	margin: 4% 0 0 10%;
+	margin: 6% 0 0 10%;
 
 	align-items: flex-end;
 

@@ -66,7 +66,6 @@ export default function BottomSection (){
 		return undefined;
 	},[ws])
 
-	console.log(defaultSelectedValue)
 
 	const HandleChange = (Selected)=>{
 

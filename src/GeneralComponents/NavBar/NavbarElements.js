@@ -70,10 +70,14 @@ export const Nav = styled.nav`
 
   @media screen and (${breakpoints.ipad}) {
     justify-content: flex-start;
-    padding: 0 0 0 2%;
+    padding: 0 0 0 5%;
     .logo-container {
-      width: 10rem;
+      width: 9rem;
     }
+  }
+
+  @media screen and (${breakpoints.mobile}) {
+    padding: 0 0 0 0%;
   }
 
   @media screen and (${breakpoints.pc}) {

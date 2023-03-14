@@ -1,5 +1,5 @@
 import {useEffect, useRef} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {
 	MainContainer, 
 	TopTitleContainer, 
@@ -37,14 +37,38 @@ const Mockup = [
 ]
 
 
-export default function UsSection ({Scroll}){
+export default function UsSection ({Scroll, SectionSetter}){
 
 	const ScrollReference = useRef()
+
+	const Locations = useNavigate()
 
 	const ScrollToBottom = ()=>{
 		return ScrollReference.current.scrollIntoView({ behavior: 'smooth' });
 	}
 
+	const HandleAction = (anchorTo, link) => {
+
+    if(anchorTo === 'Contacto'){
+      SectionSetter(anchorTo);
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth',
+      });
+      return null
+    }
+
+    if(!link){
+      return null
+    }
+
+    SectionSetter(anchorTo);
+    Locations(link);
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+  	};
 	
 	useEffect(()=>{
 		if(Scroll === 'Info'){
@@ -87,7 +111,8 @@ export default function UsSection ({Scroll}){
 			</BottomDescriptionContainer>
 			<PlanesContainer>
 				<CardsContainer>
-					{Mockup.map((el)=><InnerCard key={el.key}>
+					{Mockup.map((el)=><InnerCard 
+						onClick={()=>HandleAction(el.title, 'Planes')} key={el.key}>
 						<h2>{el.title}</h2>
 						<h5>{el.description}</h5>
 					</InnerCard>)}

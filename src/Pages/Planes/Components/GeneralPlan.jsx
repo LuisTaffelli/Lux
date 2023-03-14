@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useState, useRef } from "react"
 import { WebSocketContext } from '../../../FooterProvider/Index';
 
 import {
@@ -17,9 +17,17 @@ import WhatsappLink from '../../../Utils/WhatsappLink'
 
 
 
-export default function CardsPlanes(){
+export default function CardsPlanes({
+	ScrollTo
+}){
+
+	const PackRef = useRef()
 
 	const ws = useContext(WebSocketContext)
+
+	const ScrollToBottom = ()=>{
+		return PackRef.current.scrollIntoView({ behavior: 'smooth' });
+	}
 
 	const HandleSubmit = ()=>{
 
@@ -38,10 +46,18 @@ export default function CardsPlanes(){
 		return WhatsappLink(`Hola! Me gustaría solicitar el plan General - Reinventate`)
 	}
 
+	useEffect(()=>{
+		if(ScrollTo.split(' ')[1] === '#Iniciate'){
+			ScrollToBottom();
+		}
+
+		return undefined
+	},[ScrollTo])
+
 
 	return(
 
-		<MainContainer> 
+		<MainContainer ref={PackRef}> 
 			<MainWrapper>
 				<LeftContainer>
 					<div className="Title fs-1">

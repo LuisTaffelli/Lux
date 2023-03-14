@@ -84,10 +84,7 @@ const themes = {
 export const Main = styled.main`
   margin: 0;
   position: relative;
-
-  
-
-
+  background-color: #FFF;
 `;
 
 export const Intro = styled.section`

@@ -11,6 +11,7 @@ import Footer from './GeneralComponents/Footer/';
 import TopFooter from './GeneralComponents/FooterTop/SMFooter'
 import Planes from './Pages/Planes/Index';
 
+
 function App() {
 
   const { state, toggle } = useShow(false);
@@ -36,14 +37,13 @@ function App() {
           */}
           {/*<Route element={<ComingSoon />} exact path="/"/>*/}
           
-          <Route element={<Landing ScrollTo={Section}/>} exact path="/"/>
+          <Route element={<Landing ScrollTo={Section} SectionSetter={setSection}/>} exact path="/"/>
 
-          <Route element={<Planes />} exact path="/Planes"/>
+          <Route element={<Planes ScrollTo={Section} />} exact path="/Planes"/>
 
           <Route element={<Navigate to="/" />} path="*" />
         </Routes>
         <TopFooter />
-        <Footer />
     </>
   );
 }

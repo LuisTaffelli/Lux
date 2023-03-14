@@ -19,6 +19,8 @@ import {
   OfferSection,
 } from './Sections'
 
+import FixedWhatsapp from '../../GeneralComponents/FixedContent/WhatsAppContainer';
+
 import { PrimaryButton } from '../../GeneralComponents/Buttons';
 
 import FadeIn from './Animations';
@@ -26,7 +28,7 @@ import FadeIn from './Animations';
 
 
 export default function Landing({
-  ScrollTo
+  ScrollTo, SectionSetter
 }) {
 
   const [heroIsLoaded, setHeroIsLoaded] = useState(false);
@@ -36,9 +38,10 @@ export default function Landing({
   return (
     <Main>
       <TopSection />
-      <UsSection Scroll={ScrollTo}/>
+      <UsSection Scroll={ScrollTo} SectionSetter={SectionSetter}/>
       {/*<PortfolioSection />*/}
       <OfferSection />
+      <FixedWhatsapp />
     </Main>
   )
 }

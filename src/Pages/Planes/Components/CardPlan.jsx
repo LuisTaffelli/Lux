@@ -13,15 +13,22 @@ import WhatsappLink from '../../../Utils/WhatsappLink'
 
 
 export default function CardsPlanes({
-	Title, PackName, PackDescription, PackContent, Index, Information, Extras
+	Title, PackName, PackDescription,
+	PackContent, Index, Information, Extras,
+	ScrollTo
 }){
 
 	const ws = useContext(WebSocketContext)
 	const DescriptionContentRef = useRef()
 	const PackContentRef = useRef()
 	const InfoContent = useRef()
+	const PackRef = useRef()
 
 	const [packContent, setPackContent] = useState(new Map())
+
+	const ScrollToBottom = ()=>{
+		return PackRef.current.scrollIntoView({ behavior: 'smooth' });
+	}
 
 	const HandleChange = (event)=>{
 
@@ -41,6 +48,13 @@ export default function CardsPlanes({
 		return;
 	}
 
+
+	useEffect(()=>{
+		if(ScrollTo.split(' ')[1] === PackName){
+			ScrollToBottom()
+		}
+		return undefined
+	},[ScrollTo])
 
 	const WhatsappHandler = ()=>{
 
@@ -89,7 +103,7 @@ export default function CardsPlanes({
 
 	if(Index%2 !== 0){
 		return(
-		<MainContainer> 
+		<MainContainer ref={PackRef}> 
 			<MainWrapper>
 				<LeftContainer>
 					<div className="Title fs-1">

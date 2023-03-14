@@ -39,6 +39,7 @@ export const MirrorColumn = styled(Col)`
 
 	@media screen and (${breakpoints.pc}){
 		max-width: 336px;
+		margin-left: 1.2%;
 	}
 
 	@media screen and (${breakpoints.pcFullRes}){
@@ -105,12 +106,12 @@ export const MainContainer = styled(Container)`
 
 
 	@keyframes ArrAbaPelotas {
-		0% {top: 8%}
+		0% {top: 12%}
 		100% {top: 24%}
 	}
 
 	@keyframes ArrAbaPelotasMobile {
-		0% {top: 10%}
+		0% {top: 13%}
 		100% {top:64%}
 	}
 
@@ -195,6 +196,10 @@ export const MainContainer = styled(Container)`
 		min-height: 960px;
 	}
 
+	@media screen and (${breakpoints.ipad}){
+		padding-top: 40px;
+	}
+
 `
 
 export const CenteredColumn = styled(Col)`
@@ -205,6 +210,11 @@ export const CenteredColumn = styled(Col)`
 
 	flex-direction: column;
 
+	@media screen and (${breakpoints.pc}){
+		&>.row {
+			margin-left: 3.2%;
+		}
+	}
 
 	@media screen and (${breakpoints.ipad}){
 

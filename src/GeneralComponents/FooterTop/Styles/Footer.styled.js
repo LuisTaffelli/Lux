@@ -5,7 +5,18 @@ import { breakpoints } from '../../../Utils/breakpoints';
 
 
 
+export const Copyright = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  padding: 0.5rem;
+  font-size: 0.75rem;
+
+  margin: 0 auto;
+
+  color: #fff;
+`;
 
 
 export const FooterSection = styled.section`
@@ -13,8 +24,7 @@ export const FooterSection = styled.section`
     background-color: var(--primary-dark1);
 
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
 
     max-width: 100vw;
@@ -32,8 +42,6 @@ export const FooterSection = styled.section`
         justify-content: space-around;
 
         width: 10%;
-
-        padding-top: 16px;
 
         max-height: 100px;
 
@@ -78,7 +86,6 @@ export const FooterSection = styled.section`
 
     @media screen and (${breakpoints.ipad}){
         
-        display: block;
         background-size: cover;
         
 

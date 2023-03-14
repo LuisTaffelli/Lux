@@ -30,7 +30,7 @@ export const MobileMenu = styled.div`
   }
 
   @media screen and (${breakpoints.pc}) {
-    display: flex;
+    display: none;
   }
 
   ${({ show }) =>

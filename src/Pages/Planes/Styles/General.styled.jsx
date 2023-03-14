@@ -11,7 +11,6 @@ import WhatsappIcon from '../../../Images/wsp_boton.svg';
 import WhatsappIconHover from '../../../Images/wsp_boton_oscuro.svg';
 
 export const MainContainer = styled.section`
-	${props=> console.log(props)}
 	position: relative;
 	background-color: ${({Status})=> Status === 'Colored' ? '#E2E2E2' : '#FFF'};
 	min-height: 400px;
@@ -185,6 +184,9 @@ export const MainWrapper = styled.div`
 		}
 	}
 
+	&>*{
+		margin: 8px 0;
+	}
 
 `
 
@@ -194,6 +196,10 @@ export const LeftContainer = styled.div`
 	margin: auto;
 
 	max-width: 100%;
+
+	&>*{
+		margin: 8px 0;
+	}
 
 	.PackInfoPersonalizado{
 		display: flex;
@@ -279,6 +285,10 @@ export const RightContainer = styled.div`
 	margin: auto;
 
 	text-align: right;
+
+	&>*{
+		margin: 8px 0;
+	}
 
 	.MediaButtons{
 		justify-content: flex-end;

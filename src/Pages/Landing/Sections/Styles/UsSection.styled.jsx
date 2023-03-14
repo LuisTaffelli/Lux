@@ -100,6 +100,7 @@ export const TopTitleContainer = styled.div`
 
 	&>h2{
 		font-weight: 600;
+		font-size: 2.7rem;
 	}
 
 	&:after{
@@ -126,7 +127,7 @@ export const TopDescriptionContainer = styled.div`
 
 	margin: 40px auto 0 9%;
 
-	font-size: 1.2rem;
+	font-size: 1rem;
 
 	font-family: 'Poppins';
 
@@ -163,6 +164,7 @@ export const BottomTitleContainer = styled.div`
 
 	&>h2{
 		font-weight: 600;
+		font-size: 2.7rem;
 	}
 
 	&:after{
@@ -190,7 +192,7 @@ export const BottomDescriptionContainer = styled.div`
 
 	margin: 40px 0 0 6%;
 
-	font-size: 1.2rem;
+	font-size: 1rem;
 
 	font-family: 'Poppins';
 
@@ -233,6 +235,8 @@ export const InnerCard = styled.div`
 
 	width: 90%;
 
+	cursor: pointer;
+
 	margin: 12px 0;
 
 	transition: transform ease-in 0.6s;
@@ -274,21 +278,25 @@ export const InnerCard = styled.div`
 			font-size: 18px;
 		}
 		@media screen and (${breakpoints.mobile}){
-			font-size: 14px;
+			font-size: 16px;
 		}
 		@media screen and (${breakpoints.pcFullRes}){
 			font-size: calc(0.125rem + 0.9vw);
-			text-align: center;
 		}
 	}
 
 	@media screen and (${breakpoints.mobile}){
 		width: 90%;
-		margin: 12px 0; 
+		margin: 12px 0;
+		height: 400px;
+	}
+
+	@media screen and (${breakpoints.ipad}){
+		height: 400px;
 	}
 
 	@media screen and (${breakpoints.pc}){
-		width: 25%;
+		width: 27%;
 	}
 
 

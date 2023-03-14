@@ -7,6 +7,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
+
+export const Main = styled.main`
+  margin: 0;
+  position: relative;
+  background-color: #FFF;
+`;
+
+
 export const MirrorColumn = styled(Col)`
 
 	
