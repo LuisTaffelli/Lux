@@ -27,7 +27,7 @@ export default function CardsPlanes({
 	const [packContent, setPackContent] = useState(new Map())
 
 	const ScrollToBottom = ()=>{
-		return PackRef.current.scrollIntoView({ behavior: 'smooth' });
+		return PackRef.current?.scrollIntoView({ behavior: 'smooth' });
 	}
 
 	const HandleChange = (event)=>{

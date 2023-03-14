@@ -26,7 +26,7 @@ export default function CardsPlanes({
 	const ws = useContext(WebSocketContext)
 
 	const ScrollToBottom = ()=>{
-		return PackRef.current.scrollIntoView({ behavior: 'smooth' });
+		return PackRef.current?.scrollIntoView({ behavior: 'smooth' });
 	}
 
 	const HandleSubmit = ()=>{
