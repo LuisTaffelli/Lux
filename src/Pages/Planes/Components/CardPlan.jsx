@@ -50,7 +50,7 @@ export default function CardsPlanes({
 
 
 	useEffect(()=>{
-		if(ScrollTo.split(' ')[1] === PackName){
+		if(ScrollTo?.split(' ')[1] === PackName){
 			ScrollToBottom()
 		}
 		return undefined

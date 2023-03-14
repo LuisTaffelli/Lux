@@ -47,7 +47,7 @@ export default function CardsPlanes({
 	}
 
 	useEffect(()=>{
-		if(ScrollTo.split(' ')[1] === '#Iniciate'){
+		if(ScrollTo?.split(' ')[1] === '#Iniciate'){
 			ScrollToBottom();
 		}
 
