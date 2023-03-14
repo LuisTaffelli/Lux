@@ -11,7 +11,7 @@ export const LinkWhatsapp = styled.a`
     cursor: pointer;
     max-width: 65px;
     bottom: 10%;
-    left: 85%;
+    left: 90%;
 
 
 
