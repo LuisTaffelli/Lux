@@ -280,7 +280,7 @@ export const InnerCard = styled.div`
 			font-size: 16px;
 		}
 		@media screen and (${breakpoints.mobile}){
-			font-size: 16px;
+			font-size: 14px;
 		}
 		@media screen and (${breakpoints.pc}){
 			font-size: calc(0.175rem + 0.8vw);
