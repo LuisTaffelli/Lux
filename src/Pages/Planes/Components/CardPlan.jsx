@@ -18,11 +18,11 @@ export default function CardsPlanes({
 	ScrollTo
 }){
 
-	const ws = useContext(WebSocketContext)
-	const DescriptionContentRef = useRef()
-	const PackContentRef = useRef()
-	const InfoContent = useRef()
-	const PackRef = useRef()
+	const ws = useContext(WebSocketContext);
+	const DescriptionContentRef = useRef();
+	const PackContentRef = useRef();
+	const InfoContent = useRef();
+	const PackRef = useRef();
 
 	const [packContent, setPackContent] = useState(new Map())
 
@@ -145,7 +145,7 @@ export default function CardsPlanes({
 	}
 
 	return(
-		<MainContainer Status="Colored"> 
+		<MainContainer ref={PackRef} Status="Colored"> 
 			<MainWrapper position="Right">
 				<LeftContainer position="Right">
 					<div className="ColorBox">
