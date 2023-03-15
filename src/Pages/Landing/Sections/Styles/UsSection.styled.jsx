@@ -277,7 +277,7 @@ export const InnerCard = styled.div`
 		font-weight: 300;
 		line-height: 1.4;
 		@media screen and (${breakpoints.ipad}){
-			font-size: 16px;
+			font-size: 14px;
 		}
 		@media screen and (${breakpoints.mobile}){
 			font-size: 14px;
