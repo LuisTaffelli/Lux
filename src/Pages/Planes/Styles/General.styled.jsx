@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 
 import WhatsappIcon from '../../../Images/wsp_boton.svg';
 import WhatsappIconHover from '../../../Images/wsp_boton_oscuro.svg';
+import Arrow from '../../../Images/Flecha.svg';
 
 export const MainContainer = styled.section`
 	position: relative;
@@ -47,6 +48,8 @@ export const MainContainer = styled.section`
 		padding-top: 200px;
 	}
 
+
+
 `
 
 export const MainWrapper = styled.div`
@@ -83,10 +86,51 @@ export const MainWrapper = styled.div`
 	.SubTitle{
 		font-weight: 600;
 	}
+
 	.Description{
 		font-family: 'Poppins';
 		margin: 8px 0;
+
+		@media screen and (${breakpoints.mobile}){
+			margin: 12px 0;
+
+			.ShowMore{
+				display: none;
+			}
+		}
 	}
+
+	.SeeMore{
+		display: none;
+
+		color: var(--primary);
+
+		position: relative;
+
+		&:after{
+			content: "";
+			background: url(${Arrow}) no-repeat;
+			min-width: 40px;
+			min-height: 40px;
+			transform: rotate(90deg);
+		}
+
+		@media screen and (${breakpoints.mobile}){
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0 auto;
+			top: -20px;
+			height: 32px;
+		}
+	}
+
+	.Hidden{
+		&:after{
+			display: none;
+		}
+	}
+
 	.Offers{
 		font-family: 'Poppins';
 		font-weight: 600;
@@ -184,9 +228,12 @@ export const MainWrapper = styled.div`
 		}
 	}
 
+
 	&>*{
 		margin: 8px 0;
 	}
+
+
 
 `
 
@@ -285,6 +332,7 @@ export const RightContainer = styled.div`
 	margin: auto;
 
 	text-align: right;
+
 
 	&>*{
 		margin: 8px 0;

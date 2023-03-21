@@ -9,7 +9,9 @@ import {
 	RightContainer
 } from '../Styles/General.styled'
 
-import WhatsappLink from '../../../Utils/WhatsappLink'	
+import WhatsappLink from '../../../Utils/WhatsappLink';
+import Arrow from '../../../Images/Flecha.svg';
+
 
 
 export default function CardsPlanes({
@@ -23,6 +25,9 @@ export default function CardsPlanes({
 	const PackContentRef = useRef();
 	const InfoContent = useRef();
 	const PackRef = useRef();
+
+	const SeeMoreButton = useRef()
+	const [ArrowState, setArrowState] = useState('Show')
 
 	const [packContent, setPackContent] = useState(new Map())
 
@@ -65,6 +70,25 @@ export default function CardsPlanes({
 		return WhatsappLink(`Hola! Me gustaría solicitar el plan de ${Title}-${PackName.split('#')[1]}`)
 	}
 
+	const HandleMore = ()=>{
+
+		const StylesSpan = DescriptionContentRef.current.firstElementChild?.style.display
+
+		if(StylesSpan === 'none' || StylesSpan === ''){
+			DescriptionContentRef.current.firstElementChild.style.display = "inline";
+			SeeMoreButton.current.innerHTML = "Ver Menos";
+			setArrowState('Hidden');
+			return null;
+		}
+
+		setArrowState('Show');
+		DescriptionContentRef.current.firstElementChild.style.display = "none";
+		SeeMoreButton.current.innerHTML = "Ver Más";
+
+		return null;
+
+	}
+
 	const HandleSubmit = ()=>{
 
 		const ProvArr = []
@@ -85,6 +109,7 @@ export default function CardsPlanes({
 
 	useEffect(()=>{
 		DescriptionContentRef.current.innerHTML = PackDescription
+		console.log(DescriptionContentRef.current.firstElementChild?.style)
 		return undefined;
 	},[DescriptionContentRef])
 
@@ -110,6 +135,10 @@ export default function CardsPlanes({
 						Pack <span className="Luxed">{PackName}</span>
 					</div>
 					<div ref={DescriptionContentRef} className="Description fs-6"/>
+					<button className={"SeeMore " + ArrowState} ref={SeeMoreButton}
+					onClick={HandleMore} type="button">
+						Ver Más 
+					</button>
 					<div className="Offers fs-6" ref={PackContentRef} />
 					<div className="PackInfoPersonalizado">
 						<div className="PersonalizadoLeft">
@@ -157,6 +186,10 @@ export default function CardsPlanes({
 						Pack <span className="Luxed">{PackName}</span>
 					</div>
 					<div ref={DescriptionContentRef} className="Description fs-6"/>
+					<button className={"SeeMore " + ArrowState} ref={SeeMoreButton}
+					onClick={HandleMore} type="button">
+						Ver Más 
+					</button>
 					<div className="Offers fs-6" ref={PackContentRef} />
 					<div className="PackInfoPersonalizado">
 						<div className="PersonalizadoLeft">

@@ -48,6 +48,9 @@ export const MirrorColumn = styled(Col)`
 	}
 
 	@media screen and (${breakpoints.mobile}){
+		max-width: unset;
+		width: 90%;
+		margin: 0 auto;
 	}
 
 
@@ -61,8 +64,14 @@ export const PlanesBoton = styled(Button)`
 
 	text-align: center;
 
-	background-color: transparent;
+	background-color: rgba(255,255,255);
+	border-radius: 999999999999px;
+	width: 25%;
+
+
+
 	border: none;
+
 
 	margin-top: 8px;
 		
@@ -70,10 +79,11 @@ export const PlanesBoton = styled(Button)`
 		font-size: calc(1.425rem + 0.9vw);
 		width: max-content;
 		margin: 0 auto;
+		color: var(--primary);
 	}
 
 	&:hover{
-		background-color: transparent !important;
+		background-color: #2B2B2B !important;
 		border-color: transparent !important;
 	}
 
@@ -172,7 +182,9 @@ export const MainContainer = styled(Container)`
 
 	@media screen and (${breakpoints.mobile}){
 		min-height: 800px;
+		max-height: 100vh;
 		.Bubbles{
+			display: none;
 			width: 40%;
     		left: -21%;
     		top: 25%;
@@ -289,7 +301,7 @@ export const RowContainer = styled(Row)`
 	}
 
 	@media screen and (${breakpoints.mobile}){
-		width: 80%;
+		width: 90%;
 		.BlurTL{
     		width: 120%;
     		height: 122%;
@@ -344,16 +356,26 @@ export const InnerTitle = styled(Col)`
 			margin: 30px auto 8px auto;
 			font-size: calc(0.9rem + 0.9vw);
 		}
+
+		&>span{
+			word-break: none;
+		}
 	}
 
 	@media screen and (${breakpoints.mobile}){
+		width: 100%;
+
 		&>h3{
-			width: 60%;
+			width: 75%;
 			font-size: calc(1rem + 0.9vw);
 		}
 		&>p{
 			font-size: 1.2rem;
 		}
+	}
+
+	@media screen and (${breakpoints.mobile}){
+		
 	}
 
 

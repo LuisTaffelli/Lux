@@ -7,8 +7,7 @@ import {breakpoints} from '../../../Utils/breakpoints'
 export const MainContainer = styled.section`
 
 	position: relative;
-	background: url(${BackgroundImage}) no-repeat;
-	background-color: var(--complement-dregrade4);
+	background: linear-gradient(80deg,var(--complement-dregrade4),#8175f5);
 	min-height: 400px;
 
 	background-size: cover;
@@ -28,6 +27,10 @@ export const MainContainer = styled.section`
 	@media screen and (${breakpoints.ipad}){
 		flex-direction: column;
 		padding-bottom: 16px;
+	}
+
+	@media screen and (${breakpoints.mobile}){
+		background-size: contain;
 	}
 
 `

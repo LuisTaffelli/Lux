@@ -67,17 +67,15 @@ export default function TopSection (){
 						</Col>
 					</Row>
 					<Row>
-						<MirrorColumn status={MirrorStatus}>
+						<Col>
 							<StyledLink to='/Planes' className="text-light">
-								<PlanesBoton type="button" onClick={()=>setMirrorStatus(
-									(old)=>!old
-									)}>
+								<PlanesBoton type="button">
 									<h2>
 										VER PLANES
 									</h2>
 								</PlanesBoton>
 							</StyledLink>
-						</MirrorColumn>
+						</Col>
 					</Row>
 				</CenteredColumn>
 			</Row>
