@@ -41,7 +41,7 @@ export default function Landing({
       <UsSection Scroll={ScrollTo} SectionSetter={SectionSetter}/>
       {/*<PortfolioSection />*/}
       <OfferSection />
-      <FixedWhatsapp />
+      {/*<FixedWhatsapp />*/}
     </Main>
   )
 }

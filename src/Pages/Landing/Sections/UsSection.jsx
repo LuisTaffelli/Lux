@@ -128,8 +128,8 @@ export default function UsSection ({Scroll, SectionSetter}){
 
 
 			<img src={BackgroundWhite} className='RightTopCorner' />
-			<img src={DotsRight} className='RightDots' />
-			<img src={DotsBelow} className='BottomDots' />
+			{/*<img src={DotsRight} className='RightDots' />*/}
+			{/*<img src={DotsBelow} className='BottomDots' />*/}
 
 		</MainContainer>
 

@@ -66,7 +66,7 @@ export const PlanesBoton = styled(Button)`
 
 	background-color: rgba(255,255,255);
 	border-radius: 999999999999px;
-	width: 25%;
+	width: 27%;
 
 
 
@@ -87,8 +87,13 @@ export const PlanesBoton = styled(Button)`
 		border-color: transparent !important;
 	}
 
+	@media screen and (${breakpoints.ipad}){
+		width: 100%;
+	}
+
 	@media screen and (${breakpoints.mobile}){
 		margin: 8px auto;
+
 		&>h2{
 			font-size: calc(1.225rem + 0.9vw);
 		}
@@ -372,10 +377,6 @@ export const InnerTitle = styled(Col)`
 		&>p{
 			font-size: 1.2rem;
 		}
-	}
-
-	@media screen and (${breakpoints.mobile}){
-		
 	}
 
 

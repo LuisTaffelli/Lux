@@ -7,7 +7,7 @@ import {breakpoints} from '../../../Utils/breakpoints'
 export const MainContainer = styled.section`
 
 	position: relative;
-	background: linear-gradient(80deg,var(--complement-dregrade4),#8175f5);
+	background: var(--dark);
 	min-height: 400px;
 
 	background-size: cover;
@@ -83,7 +83,7 @@ export const TextContainer = styled.div`
 
 export const SendButton = styled.button`
 
-	color: #FFF;
+	color: var(--primary);
 
 	display: flex;
 
@@ -91,7 +91,7 @@ export const SendButton = styled.button`
 
 	justify-content: center;
 
-	background-color: var(--primary-dark1);
+	background-color: #FFF;
 
 	font-weight: 600;
 
@@ -102,6 +102,11 @@ export const SendButton = styled.button`
 	width: 96px;
 
 	border-radius: 24px;
+
+	&:hover{
+		background-color: var(--primary);
+		color: #FFF;
+	}
 
 `
 
@@ -153,7 +158,7 @@ export const TopInput = styled.div`
 	width: 30vw;
 
 	&>p{
-		color: var(--primary);
+		color: #FFF;
 		font-size: 18px;
 		font-weight: 600;
 		margin: 0 0 16px 0;
@@ -180,9 +185,10 @@ export const EmailInput = styled.div`
 	margin-top: 32px;
 
 	&>p{
+		margin-top: 8px;
 		padding-left: 12px;
 		font-size: 14px;
-		color: var(--primary);
+		color: #FFF;
 	}
 
 	.InputMail{

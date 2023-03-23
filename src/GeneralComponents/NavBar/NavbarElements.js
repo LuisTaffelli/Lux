@@ -11,9 +11,8 @@ export const Header = styled.header`
   min-width: 100vw;
 
   z-index: 1002;
-  box-shadow: 0 0.5rem 0.75rem #0001;
 
-  transition: all 0.7s ease-in;
+  transition: all 0.4s ease-in;
 
   .Icon{
     background: url(${props=> props.show ? 
@@ -34,7 +33,7 @@ export const Header = styled.header`
           color: #00040E;
         `
       : css`
-          background-color: var(--primary);
+          background-color: var(${color});
           color: #00040E;
         `}
 

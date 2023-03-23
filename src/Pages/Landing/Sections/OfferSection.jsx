@@ -65,7 +65,7 @@ export default function OfferSection (){
 				</InnerCard>)}
 			</CardsContainer>
 
-			<img src={Bars} className='BottomDots' />
+			{/*<img src={Bars} className='BottomDots' />*/}
 
 		</MainContainer>
 

@@ -36,7 +36,7 @@ export default function Planes ({
 				ScrollTo={ScrollTo}
 				/>) : null}
 			<PlanPersonalizado />
-			<FixedWhatsapp />
+			{/*<FixedWhatsapp />*/}
 		</Main>
 
 	);

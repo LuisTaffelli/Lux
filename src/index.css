@@ -27,7 +27,8 @@
 
   --transparent: transparent;
 
-  --gradient1: linear-gradient(to right, #560b26, #780e33, #9b113e, #c01449, #e61952);
+  --gradient1: linear-gradient(to right, #560b26, #780e33, #9b113e, #c01449, #e61952, #e61952);
+  --gradient2: linear-gradient(to right, #560b26, #780e33, #9b113e, #c01449, #e61952, #e61952);
 
   
 
@@ -68,7 +69,7 @@ body {
   margin: 0;
   font-family: Montserrat, Poppins, Helvetica, Arial, sans-serif !important;
   display: flex;
-  background-image: linear-gradient(to right, #560b26, #780e33, #9b113e, #c01449, #e61952);
+  background-image: linear-gradient(to right, #560b26, #780e33, #9b113e, #c01449, #e61952, #e61952);
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -91,4 +92,14 @@ button {
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
+}
+
+
+.swal2-popup{
+  border-radius: 16px;
+}
+
+.swal2-confirm{
+  background-color: #9b113e !important;
+  font-weight: 600;
 }

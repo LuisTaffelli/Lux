@@ -33,7 +33,7 @@ function Navbar({ state, toggle, SectionSetter }) {
 
 
   const HandleColor = (event)=>{
-    setBgColor('--primary-dark1')
+    setBgColor('--dark')
 
     if(window.pageYOffset === 0){
       setBgColor('--transparent')

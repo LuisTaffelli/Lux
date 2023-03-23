@@ -63,7 +63,7 @@ export const PlanesBoton = styled(Button)`
 export const MainContainer = styled.section`
 
 	position: relative;
-	background-color: var(--primary);
+	background: var(--gradient2);
 	min-height: 400px;
 
 	padding: 0 16%;

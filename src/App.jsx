@@ -2,14 +2,18 @@ import { useEffect, useReducer, useState } from 'react';
 import { Route, Routes, Navigate } from 'react-router';
 import useShow  from './Utils/Hooks/useShow';
 
-import './App.scss';
-import './App.css';
+import FixedWhatsapp from './GeneralComponents/FixedContent/WhatsAppContainer';
 import Navbar from './GeneralComponents/NavBar/index';
 import Landing from './Pages/Landing/Landing';
 import ComingSoon from './Pages/ComingSoon/';
 import Footer from './GeneralComponents/Footer/';
 import TopFooter from './GeneralComponents/FooterTop/SMFooter'
 import Planes from './Pages/Planes/Index';
+
+
+import './App.scss';
+import './App.css';
+
 
 
 function App() {
@@ -44,6 +48,7 @@ function App() {
           <Route element={<Navigate to="/" />} path="*" />
         </Routes>
         <TopFooter />
+        <FixedWhatsapp />
     </>
   );
 }

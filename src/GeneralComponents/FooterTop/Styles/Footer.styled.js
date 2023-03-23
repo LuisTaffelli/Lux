@@ -28,7 +28,7 @@ export const FooterSection = styled.section`
     justify-content: center;
 
     max-width: 100vw;
-    height: 100px;
+    height: 60px;
 
     
 
@@ -90,6 +90,8 @@ export const FooterSection = styled.section`
         
 
         color: #FFF;
+
+        height: 80px;
 
         .IconsContainer{
             width: 90%;
