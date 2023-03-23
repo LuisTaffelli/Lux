@@ -63,11 +63,10 @@ export default function SMFooter() {
             
             .then(function(response) {
             
-               window.alert('Tu correo fue enviado con exito!');
+                Swal.fire('Tu correo fue enviado con exito!!', '', 'success');
             
             }, function(error) {
-            
-               window.alert('Hubo un Error mandando el correo');
+                Swal.fire('Hubo un Error mandando el correo', '', 'error');
             
             });
         }

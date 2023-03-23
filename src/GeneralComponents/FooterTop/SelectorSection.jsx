@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState, useRef } from "react"
 import { WebSocketContext } from '../../FooterProvider/Index';
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 import {
 	MainContainer, 
@@ -16,6 +18,9 @@ import Select from 'react-select'
 import Bubbles from '../../Images/ESFERAS.png'
 
 import BackgroundWhite from '../../Images/Decoracion_6.svg'
+
+const MySwal = withReactContent(Swal)
+
 
 const Options =[ 
 	{ value: 'Iniciate', label: 'Iniciate' },
@@ -97,14 +102,10 @@ export default function BottomSection (){
 		emailjs.send('service_l0i5t12', 'template_h3uic6b', templateParams, '-Egg2ZV8NvbvsYqWm')
     	
     	.then(function(response) {
-    	
-    	   window.alert('Tu correo fue enviado con exito!');
-    	
-    	}, function(error) {
-    	
-    	   window.alert('Hubo un Error mandando el correo');
-    	
-    	});
+            Swal.fire('Tu correo fue enviado con exito!!', '', 'success');
+		}, function(error) {
+            Swal.fire('Hubo un Error mandando el correo', '', 'error');
+        });
 
 	}
 
